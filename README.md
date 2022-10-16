@@ -14,4 +14,4 @@
 ### 系列博客（Blog）
 
 - [掘金专栏一览](https://juejin.cn/column/7123935861976072199)
-- [【Gradle-1】入门Gradle，前置必读](https://juejin.cn/column/7123935861976072199)
+- [【Gradle-1】入门Gradle，前置必读](https://juejin.cn/post/7155109977579847710)
