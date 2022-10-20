@@ -3,6 +3,7 @@
 ![](https://img.shields.io/badge/language-kotlin-orange.svg)
 ![](https://img.shields.io/badge/%E6%8E%98%E9%87%91-yechaoa-blue)
 ![](https://img.shields.io/badge/CSDN-yechaoa-green.svg)
+![Profile views](https://gpvc.arturio.dev/yechaoaGradleX)
 
 <img src="/pic/learning gradle.png"/>
 
