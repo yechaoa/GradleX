@@ -32,6 +32,10 @@ android {
     }
 }
 
+repositories {
+    // url
+}
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -43,5 +47,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // 看Gradle源码用
-    implementation "com.android.tools.build:gradle:7.4"
+//    implementation "com.android.tools.build:gradle:7.4"
+}
+
+project.beforeEvaluate {
+    println("---project：beforeEvaluate Project开始评估，对象是 = " + project.name)
+}
+
+project.afterEvaluate {
+    println("---project：afterEvaluate Project评估完毕，对象是 = " + project.name)
 }
