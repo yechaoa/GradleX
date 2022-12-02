@@ -36,10 +36,10 @@ gradle.projectsLoaded {
 
 gradle.allprojects {
     beforeEvaluate {
-        println("---Gradle：Projec beforeEvaluate Project开始评估，对象是 = "+project.name)
+        println("---Gradle：Project beforeEvaluate Project开始评估，对象是 = "+project.name)
     }
     afterEvaluate {
-        println("---Gradle：Projec afterEvaluate Project评估完毕，对象是 = "+project.name)
+        println("---Gradle：Project afterEvaluate Project评估完毕，对象是 = "+project.name)
     }
 }
 
