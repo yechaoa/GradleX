@@ -19,3 +19,4 @@
 - [【Gradle-2】一文搞懂Gradle配置](https://juejin.cn/post/7160337743552675847)
 - [【Gradle-3】Gradle中的DSL，Groovy & Kotlin](https://juejin.cn/post/7166638852503765006)
 - [【Gradle-4】Gradle的生命周期](https://juejin.cn/post/7170684769083555877)
+- [【Gradle-5】Gradle常用命令与参数](https://juejin.cn/post/7171493698243395597)
