@@ -101,3 +101,4 @@ gradle.addListener(new BuildListener() {
 
     }
 })
+include ':plugin'

@@ -38,9 +38,27 @@ repositories {
 
 dependencies {
 
+//    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+    implementation('com.squareup.retrofit2:retrofit:2.9.0') {
+//        exclude(group: "com.squareup.okhttp3", module: "okhttp")
+        transitive(false)
+    }
+
+    implementation('com.squareup.okhttp3:okhttp') {
+        version{
+            strictly("5.0.0-alpha.11")
+        }
+    }
+
+//    implementation( 'com.squareup.okhttp3:okhttp:4.10.0'){
+//        force(true)
+//    }
+
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 
     if (project.hasProperty("isTest")) {
@@ -67,6 +85,31 @@ dependencies {
     // 看Gradle源码用
 //    implementation "com.android.tools.build:gradle:7.4"
 }
+
+
+/**
+ * 强制依赖版本
+ * 示例：com.squareup.okhttp3:okhttp:4.10.0
+ */
+configurations.all {
+    // 开启版本冲突编译直接报错模式...
+//    resolutionStrategy{
+//        failOnVersionConflict()
+//    }
+
+    // 版本冲突解析策略
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.squareup.okhttp3' && requested.name == 'okhttp') {
+            details.useVersion '4.10.0'
+        }
+        // 还可以使用startsWith通配，比如room-compiler、room-rxjava2、room-testing
+//        if (requested.group == 'androidx.room' && requested.name.startsWith('room')) {
+//            details.useVersion '2.5.0'
+//        }
+    }
+}
+
 
 project.beforeEvaluate {
     println("---project：beforeEvaluate Project开始评估，对象是 = " + project.name)
