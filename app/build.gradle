@@ -149,7 +149,6 @@ tasks.register("yechaoa") {
     }
 }
 
-task()
 
 /**
  * 自定义Task
