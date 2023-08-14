@@ -1,0 +1,74 @@
+/**
+ * 看效果在这 app > build.gradle > apply from : '../plugin.gradle'
+ */
+
+// 不嵌套
+//interface YechaoaPluginExtension {
+//    Property<String> getTitle()
+//    Property<Integer> getChapter()
+//}
+//
+//class YechaoaPlugin implements Plugin<Project> {
+//
+//    @Override
+//    void apply(Project project) {
+//        println("这是插件：${this.class.name}")
+//        def extension = project.extensions.create("yechaoa", YechaoaPluginExtension)
+//        extension.title.convention("默认配置title")
+//        extension.chapter.convention(0)
+//
+//
+//        project.task("YechaoaPluginTask") { task ->
+//            task.doLast {
+//                println("这是插件${this.class.name}，它创建了一个Task：${task.name}")
+//                println("title = ${extension.title.get()}")
+//                println("chapter = ${extension.chapter.get()}")
+//
+//                println("desc = ${extension.getSubExtension().get().getDesc().get()}")
+//            }
+//        }
+//    }
+//}
+
+// 嵌套
+class YechaoaPluginExtension {
+    String title
+    int chapter
+    SubExtension subExtension
+
+    YechaoaPluginExtension(Project project) {
+        subExtension = project.extensions.create('sub', SubExtension.class)
+    }
+}
+class SubExtension {
+    String author
+}
+
+class YechaoaPlugin implements Plugin<Project> {
+
+    @Override
+    void apply(Project project) {
+        println("这是插件：${this.class.name}")
+        def extension = project.extensions.create("yechaoa", YechaoaPluginExtension)
+        // 设置默认值 可以定义set()方法 然后在这里set
+        project.task("YechaoaPluginTask") { task ->
+            task.doLast {
+                println("这是插件${this.class.name}，它创建了一个Task：${task.name}")
+                println("title = ${extension.title}")
+                println("chapter = ${extension.chapter}")
+                println("author = ${extension.subExtension.author}")
+            }
+        }
+    }
+}
+
+apply plugin: YechaoaPlugin
+//apply(plugin: YechaoaPlugin)
+
+yechaoa {
+    title = "【Gradle-8】Gradle插件开发指南"
+    chapter = 8
+    sub {
+        author = "yechaoa"
+    }
+}

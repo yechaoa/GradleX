@@ -22,3 +22,4 @@
 - [【Gradle-5】Gradle常用命令与参数](https://juejin.cn/post/7171493698243395597)
 - [【Gradle-6】一文搞懂Gradle的依赖管理和版本决议](https://juejin.cn/post/7215579793261117501)
 - [【Gradle-7】Gradle构建核心之Task指南](https://juejin.cn/spost/7248207744087277605)
+- [【Gradle-8】Gradle插件开发指南](https://juejin.cn/spost/7267091810380136508)

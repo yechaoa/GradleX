@@ -3,10 +3,14 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven {
+            url './plugin/build/maven-repo'
+        }
     }
     // 插件解析策略 useVersion/useModule
     resolutionStrategy {
         eachPlugin {
+//            println("--- >>>  requested === " + requested.toString())
             if (requested.id.id == "com.android.application") {
                 //useVersion("2.0")
                 //println("---android plugin added---")
@@ -19,33 +23,37 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url './plugin/build/maven-repo'
+        }
     }
 }
 rootProject.name = "GradleX"
 include ':app'
+include ':plugin'
 
 println("---Gradle：开始初始化了")
 
-gradle.settingsEvaluated {
-    println("---Gradle：settingsEvaluated Settings对象评估完毕")
-}
-
-gradle.projectsLoaded {
-    println("---Gradle：projectsLoaded 准备加载Project对象了")
-}
-
-gradle.allprojects {
-    beforeEvaluate {
-        println("---Gradle：Project beforeEvaluate Project开始评估，对象是 = "+project.name)
-    }
-    afterEvaluate {
-        println("---Gradle：Project afterEvaluate Project评估完毕，对象是 = "+project.name)
-    }
-}
-
-gradle.projectsEvaluated {
-    println("---Gradle：projectsEvaluated 所有Project对象评估完毕")
-}
+//gradle.settingsEvaluated {
+//    println("---Gradle：settingsEvaluated Settings对象评估完毕")
+//}
+//
+//gradle.projectsLoaded {
+//    println("---Gradle：projectsLoaded 准备加载Project对象了")
+//}
+//
+//gradle.allprojects {
+//    beforeEvaluate {
+//        println("---Gradle：Project beforeEvaluate Project开始评估，对象是 = "+project.name)
+//    }
+//    afterEvaluate {
+//        println("---Gradle：Project afterEvaluate Project评估完毕，对象是 = "+project.name)
+//    }
+//}
+//
+//gradle.projectsEvaluated {
+//    println("---Gradle：projectsEvaluated 所有Project对象评估完毕")
+//}
 
 //@deprecated
 //gradle.addBuildListener(new TaskExecutionListener(){
@@ -101,4 +109,3 @@ gradle.addListener(new BuildListener() {
 
     }
 })
-include ':plugin'

@@ -1,11 +1,18 @@
-import org.gradle.work.ChangeType
-import org.gradle.work.Incremental
-import org.gradle.work.InputChanges
-
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.yechaoa.plugin.dependencies'
 }
+
+printDependencies {
+    enable = true
+}
+
+// task 示例抽出去 解开注释可看效果
+//apply from : '../task.gradle'
+
+// plugin 示例抽出去 解开注释可看效果
+//apply from : '../plugin.gradle'
 
 android {
     namespace 'com.yechaoa.gradlex'
@@ -42,6 +49,8 @@ repositories {
 
 dependencies {
 
+//    implementation project(":plugin")
+
 //    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
 
     implementation('com.squareup.retrofit2:retrofit:2.9.0') {
@@ -59,7 +68,6 @@ dependencies {
 //        force(true)
 //    }
 
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.8.0'
@@ -69,13 +77,10 @@ dependencies {
         println("---hasProperty isTest yes")
         if (Boolean.valueOf(getProperty('isTest'))) {
             println("---isTest true")
-
             // test
 //            implementation 'com.yechaoa.gradlex.devtools:devtools:1.1.1'
-
         } else {
             println("---isTest false")
-
 //            implementation 'com.yechaoa.gradlex.devtools:devtools:2.2.2'
         }
     } else {
@@ -115,255 +120,10 @@ configurations.all {
 }
 
 
-project.beforeEvaluate {
-    println("---project：beforeEvaluate Project开始评估，对象是 = " + project.name)
-}
-
-project.afterEvaluate {
-    println("---project：afterEvaluate Project评估完毕，对象是 = " + project.name)
-}
-
-// -------------- Task --------------
-
-tasks.register("yechaoa") {
-    it.configure {
-        description = "我是yechaoa，双击执行~"
-        group = "help"
-    }
-
-
-    it.doFirst {
-        println("${it.name} = doFirst 111")
-    }
-    it.doFirst {
-        println("${it.name} = doFirst 222")
-    }
-
-    println("Task Name = " + it.name)
-
-    it.doLast {
-        println("${it.name} = doLast 111")
-    }
-    it.doLast {
-        println("${it.name} = doLast 222")
-    }
-}
-
-
-/**
- * 自定义Task
- */
-class YechaoaTask extends DefaultTask {
-
-    @Internal
-    def taskName = "default"
-
-    @TaskAction
-    def MyAction1() {
-        println("$taskName -- MyAction1")
-    }
-
-    @TaskAction
-    def MyAction2() {
-        println("$taskName -- MyAction2")
-    }
-}
-//tasks.register("yechaoa", YechaoaTask) {
-//    taskName = "我是传入的Task Name "
+//project.beforeEvaluate {
+//    println("---project：beforeEvaluate Project开始评估，对象是 = " + project.name)
 //}
-
-
-/**
- * Task 依赖
- */
-def yechaoa111 = tasks.register("yechaoa111") {
-    it.doLast {
-        println("${it.name}")
-    }
-}
-
-def yechaoa222 = tasks.register("yechaoa222") {
-    it.doLast {
-        println("${it.name}")
-    }
-}
-
-yechaoa111.configure {
-    dependsOn yechaoa222
-}
-
-
-/**
- * onlyIf
- */
-//tasks.register("skipTask") { taskObj ->
-//    taskObj.configure {
-//        onlyIf {
-//            def provider = providers.gradleProperty("yechaoa")
-//            provider.present
-//        }
-//    }
 //
-//    taskObj.doLast {
-//        println("${it.name} is Executed")
-//    }
+//project.afterEvaluate {
+//    println("---project：afterEvaluate Project评估完毕，对象是 = " + project.name)
 //}
-
-
-/**
- * StopExecutionException
- */
-//tasks.register("skipTask") { taskObj ->
-//
-//    taskObj.doFirst {
-//        println("${it.name} is Executed doFirst")
-//    }
-//
-//    taskObj.doLast {
-//        def provider = providers.gradleProperty("yechaoa")
-//        if (provider.present) {
-//            throw new StopExecutionException()
-//        }
-//
-//        println("${it.name} is Executed doLast")
-//    }
-//}
-
-
-/**
- * enabled
- */
-//tasks.register("skipTask") { taskObj ->
-//    taskObj.configure {
-//        enabled = true
-//    }
-//
-//    taskObj.doLast {
-//        println("${it.name} is Executed")
-//    }
-//}
-
-
-/**
- * timeout
- */
-//tasks.register("skipTask") { taskObj ->
-//    taskObj.configure {
-//        timeout = Duration.ofSeconds(10)
-//    }
-//
-//    taskObj.doLast {
-//        Thread.sleep(11 * 1000)
-//        println("${it.name} is Executed")
-//    }
-//}
-
-/**
- * 增量构建
- */
-class CopyTask extends DefaultTask {
-
-    // 指定增量输入属性
-    @Incremental
-    // 指定输入
-    @InputFiles
-    FileCollection from
-
-    // 指定输出
-    @OutputDirectory
-    Directory to
-
-//    // task action 执行
-//    @TaskAction
-//    void execute() {
-//        File file = from.getSingleFile()
-//        if (file.isDirectory()) {
-//            from.getAsFileTree().each {
-//                copyFileToDir(it, to)
-//            }
-//        } else {
-//            copyFileToDir(from, to)
-//        }
-//    }
-
-    // task action 执行
-    @TaskAction
-    void execute(InputChanges inputChanges) {
-
-        boolean incremental = inputChanges.incremental
-        println("isIncremental = $incremental")
-
-        inputChanges.getFileChanges(from).each {
-            if (it.fileType != FileType.DIRECTORY) {
-                ChangeType changeType = it.changeType
-                String fileName = it.file.name
-                println("ChangeType = $changeType , ChangeFile = $fileName")
-
-                if (changeType != ChangeType.REMOVED) {
-                    copyFileToDir(it.file, to)
-                }
-            }
-        }
-
-    }
-
-    /**
-     * 复制文件到文件夹
-     * @param src 要复制的文件
-     * @param dir 接收的文件夹
-     * @return
-     */
-    static def copyFileToDir(File file, Directory dir) {
-        File dest = new File("${dir.getAsFile().path}/${file.name}")
-
-        if (!dest.exists()) {
-            dest.createNewFile()
-        }
-
-        dest.withOutputStream {
-            it.write(new FileInputStream(file).getBytes())
-        }
-    }
-
-}
-
-tasks.register("CopyTask", CopyTask) {
-    from = files('from')
-    to = layout.projectDirectory.dir('to')
-}
-
-
-/**
- * 查找Task
- */
-def aaa = tasks.findByName("yechaoa").doFirst {
-    println("yechaoa excuted doFirst by findByName")
-}
-
-def bbb = tasks.findByPath("yechaoa").doFirst {
-    println("yechaoa excuted doFirst by findByPath")
-}
-
-tasks.withType(DefaultTask).configureEach(task -> {
-    if (task.name.toLowerCase().contains("copytask")) {
-        println(task.class.name)
-    }
-})
-
-tasks.configureEach(task -> {
-    // do something
-})
-
-tasks.each {
-    // do something
-}
-
-tasks.forEach(task -> {
-    // do something
-})
-
-tasks.named("yechaoa") {
-    it.doFirst {
-        println("yechaoa excuted doFirst by named")
-    }
-}
