@@ -1,17 +1,27 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.yechaoa.plugin.dependencies'
+//    id 'com.yechaoa.plugin.dependencies'
 }
 
-printDependencies {
-    enable = true
-}
+/**
+ * 想看printDependencies效果：
+ * 1.先执行./gradlew publish发布本地
+ * 2.再解开这里和上面插件的注释 //id 'com.yechaoa.plugin.dependencies'
+ * 3.还有project > build.gradle里面的classpath
+ */
+//printDependencies {
+//    enable = true
+//}
 
-// task 示例抽出去 解开注释可看效果
+/**
+ * task 示例抽出去 解开注释可看效果
+ */
 //apply from : '../task.gradle'
 
-// plugin 示例抽出去 解开注释可看效果
+/**
+ * plugin 示例抽出去 解开注释可看效果
+ */
 //apply from : '../plugin.gradle'
 
 android {

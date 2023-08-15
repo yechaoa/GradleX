@@ -1,6 +1,12 @@
 buildscript {
     dependencies {
-        classpath('com.yechaoa.plugin:dependencies:1.0.0')
+        /**
+         * 想看printDependencies效果：
+         * 1.先执行./gradlew publish发布本地
+         * 2.再解开app > build.gradle里面的插件的注释 //id 'com.yechaoa.plugin.dependencies'
+         * 3.还有app > build.gradle里面的printDependencies
+         */
+//        classpath('com.yechaoa.plugin:dependencies:1.0.0')
     }
 }
 

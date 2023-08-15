@@ -4,6 +4,7 @@ pluginManagement {
         google()
         mavenCentral()
         maven {
+            // 本地maven仓库地址
             url './plugin/build/maven-repo'
         }
     }
@@ -24,6 +25,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven {
+            // 本地maven仓库地址
             url './plugin/build/maven-repo'
         }
     }
