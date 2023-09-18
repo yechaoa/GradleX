@@ -1,4 +1,8 @@
 buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
     dependencies {
         /**
          * 想看printDependencies效果：
@@ -7,16 +11,17 @@ buildscript {
          * 3.还有app > build.gradle里面的printDependencies
          */
 //        classpath('com.yechaoa.plugin:dependencies:1.0.0')
+        // 远端仓库地址
+        classpath('com.github.yechaoa.GradleX:dependencies:1.0')
     }
 }
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
 //    id 'com.android.application' version '7.3.0' apply false
-    id("com.android.application") version '7.3.0' apply false
-    id 'com.android.library' version '7.3.0' apply false
+    id("com.android.application") version '8.1.1' apply false
+    id 'com.android.library' version '8.1.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
-
     id "com.dorongold.task-tree" version "2.1.1"
 }
 

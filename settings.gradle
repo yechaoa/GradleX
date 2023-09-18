@@ -7,6 +7,7 @@ pluginManagement {
             // 本地maven仓库地址
             url './plugin/build/maven-repo'
         }
+        maven { url 'https://jitpack.io' }
     }
     // 插件解析策略 useVersion/useModule
     resolutionStrategy {
@@ -28,6 +29,7 @@ dependencyResolutionManagement {
             // 本地maven仓库地址
             url './plugin/build/maven-repo'
         }
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "GradleX"

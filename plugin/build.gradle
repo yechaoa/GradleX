@@ -1,50 +1,71 @@
 plugins {
-    id 'java-gradle-plugin'
-    id 'maven-publish'
+//    id 'java-gradle-plugin'
+//    id 'maven-publish'
+    // Gradle插件门户发布插件 这个插件包含'java-gradle-plugin'和'maven-publish'
+    id 'com.gradle.plugin-publish' version '1.1.0'
 }
 
-gradlePlugin {
-    plugins {
-        register {
-            id = 'com.yechaoa.plugin.dependencies'
-            implementationClass = "com.yechaoa.plugin.DependenciesPlugin"
-        }
-    }
-}
-
-group 'com.yechaoa.plugin'
-version '1.0.0'
-
-publishing {
-    // 配置Plugin GAV
-    publications {
-        maven(MavenPublication) {
-            groupId = group
-            artifactId = 'dependencies'
-            version = version
-
-            from components.java
-        }
-    }
-    // 配置仓库地址
-    repositories {
-        maven {
-            url layout.buildDirectory.dir("maven-repo")
-        }
-        ivy {
-            url layout.buildDirectory.dir("ivy-repo")
-        }
-    }
+repositories {
+    mavenCentral()
 }
 
 dependencies {
     // 不需要，id 'java-gradle-plugin'搞定
 //    implementation(gradleApi())
 //    implementation(localGroovy())
-    implementation 'com.android.tools.build:gradle:7.3.0'
+
+    implementation 'com.android.tools.build:gradle:8.1.1'
+}
+
+group 'com.yechaoa.plugin'
+version '1.0.0'
+
+//publishing {
+//    // 配置Plugin GAV
+//    publications {
+//        maven(MavenPublication) {
+//            groupId = group
+//            artifactId = 'dependencies'
+//            version = version
+//
+//            from components.java
+//        }
+//    }
+//    // 配置仓库地址
+//    repositories {
+//        maven {
+//            url layout.buildDirectory.dir("maven-repo")
+//        }
+//    }
+//}
+
+gradlePlugin {
+    // 项目地址
+    website = 'https://github.com/yechaoa/GradleX'
+    // 项目仓库URI
+    vcsUrl = 'https://github.com/yechaoa/GradleX.git'
+
+    // 可以有多个plugin配置
+    plugins {
+        // register 这个名字可以随便填
+        dependenciesplugin {
+            // 插件id
+            id = 'com.yechaoa.plugin.dependencies'
+            // 插件全路径
+            implementationClass = "com.yechaoa.plugin.DependenciesPlugin"
+            // 插件名称
+            displayName = 'DependenciesPlugin'
+            // 描述、简介
+            description = 'Show Dependencies Plugin'
+            // 插件类别，即标签、关键词的意思
+            tags.addAll('dependencies', 'yechaoa', 'plugin')
+        }
+    }
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    withSourcesJar()
+    withJavadocJar()
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }

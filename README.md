@@ -1,6 +1,6 @@
 # GradleX
 
-![](https://img.shields.io/badge/language-kotlin-orange.svg)
+[![](https://jitpack.io/v/yechaoa/GradleX.svg)](https://jitpack.io/#yechaoa/GradleX)
 ![](https://img.shields.io/badge/%E6%8E%98%E9%87%91-yechaoa-blue)
 ![](https://img.shields.io/badge/CSDN-yechaoa-green.svg)
 ![Profile views](https://gpvc.arturio.dev/yechaoaGradleX)
@@ -8,9 +8,9 @@
 <img src="/pic/learning gradle.png"/>
 
 ### 环境（Environment）
-- Android Studio Dolphin | 2021.3.1
-- Android Gradle Plugin 7.4
-- JDK 11
+- Android Studio Giraffe | 2022.3.1 Patch 1
+- Android Gradle Plugin 8.1.1
+- JDK 17
 
 ### 系列博客（Blog）
 
@@ -23,3 +23,29 @@
 - [【Gradle-6】一文搞懂Gradle的依赖管理和版本决议](https://juejin.cn/post/7215579793261117501)
 - [【Gradle-7】Gradle构建核心之Task指南](https://juejin.cn/spost/7248207744087277605)
 - [【Gradle-8】Gradle插件开发指南](https://juejin.cn/spost/7267091810380136508)
+- [【Gradle-9】Gradle插件发布指南](https://juejin.cn/spost/7280062870669246525)
+
+### 插件使用
+step 1
+```agsl
+repositories {
+	...
+	maven { url 'https://jitpack.io' }
+}
+```
+step 2
+```agsl
+dependencies {
+    classpath('com.github.yechaoa.GradleX:dependencies:1.0')
+}
+```
+step 3
+```agsl
+plugins {
+    id 'com.yechaoa.plugin.dependencies'
+}
+
+printDependencies {
+    enable = true
+}
+```
