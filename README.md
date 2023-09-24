@@ -24,6 +24,7 @@
 - [【Gradle-7】Gradle构建核心之Task指南](https://juejin.cn/spost/7248207744087277605)
 - [【Gradle-8】Gradle插件开发指南](https://juejin.cn/spost/7267091810380136508)
 - [【Gradle-9】Gradle插件发布指南](https://juejin.cn/spost/7280062870669246525)
+- [【Gradle-10】不可忽视的构建分析](https://juejin.cn/post/7282150745164005432)
 
 ### 插件使用
 step 1
