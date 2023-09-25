@@ -13,12 +13,9 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        Log.v("yechaoa","onResume")
-        Log.d("yechaoa","onResume")
-        Log.i("yechaoa","onResume")
-        Log.w("yechaoa","onResume")
-        Log.e("yechaoa","onResume")
-        Log.wtf("yechaoa wtf","onResume by wtf")
+        val packageInfo = applicationContext.packageManager.getPackageInfo(applicationContext.packageName, 0)
+        Log.wtf("yechaoa", "versionName = " + packageInfo.versionName)
+        Log.wtf("yechaoa", "versionCode = " + packageInfo.versionCode)
     }
 
 }

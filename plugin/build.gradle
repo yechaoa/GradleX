@@ -1,8 +1,8 @@
 plugins {
-//    id 'java-gradle-plugin'
-//    id 'maven-publish'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
     // Gradle插件门户发布插件 这个插件包含'java-gradle-plugin'和'maven-publish'
-    id 'com.gradle.plugin-publish' version '1.1.0'
+//    id 'com.gradle.plugin-publish' version '1.1.0'
 }
 
 repositories {
@@ -40,10 +40,10 @@ version '1.0.0'
 //}
 
 gradlePlugin {
-    // 项目地址
-    website = 'https://github.com/yechaoa/GradleX'
-    // 项目仓库URI
-    vcsUrl = 'https://github.com/yechaoa/GradleX.git'
+//    // 项目地址
+//    website = 'https://github.com/yechaoa/GradleX'
+//    // 项目仓库URI
+//    vcsUrl = 'https://github.com/yechaoa/GradleX.git'
 
     // 可以有多个plugin配置
     plugins {
@@ -53,19 +53,19 @@ gradlePlugin {
             id = 'com.yechaoa.plugin.dependencies'
             // 插件全路径
             implementationClass = "com.yechaoa.plugin.DependenciesPlugin"
-            // 插件名称
-            displayName = 'DependenciesPlugin'
-            // 描述、简介
-            description = 'Show Dependencies Plugin'
-            // 插件类别，即标签、关键词的意思
-            tags.addAll('dependencies', 'yechaoa', 'plugin')
+//            // 插件名称
+//            displayName = 'DependenciesPlugin'
+//            // 描述、简介
+//            description = 'Show Dependencies Plugin'
+//            // 插件类别，即标签、关键词的意思
+//            tags.addAll('dependencies', 'yechaoa', 'plugin')
         }
     }
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+//java {
+//    withSourcesJar()
+//    withJavadocJar()
+//    sourceCompatibility = JavaVersion.VERSION_17
+//    targetCompatibility = JavaVersion.VERSION_17
+//}

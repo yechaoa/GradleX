@@ -11,7 +11,7 @@ plugins {
  * 3.还有project > build.gradle里面的classpath
  */
 printDependencies {
-    enable = true
+    enable = false
 }
 
 /**
@@ -24,6 +24,26 @@ printDependencies {
  */
 //apply from : '../plugin.gradle'
 
+def getVersionNameByProperty() {
+    def name
+    if (hasProperty("VersionName") && getProperty('VersionName') != null) {
+        name = getProperties().get('VersionName')
+    } else {
+        name = "2.0-default"
+    }
+    return name
+}
+
+def getVersionCodeByProperty() {
+    def code
+    if (hasProperty("VersionCode") && getProperties().get('VersionCode') != null) {
+        code = getProperties().get('VersionCode')
+    } else {
+        code = 2
+    }
+    return code
+}
+
 android {
     namespace 'com.yechaoa.gradlex'
     compileSdk 32
@@ -32,14 +52,27 @@ android {
         applicationId "com.yechaoa.gradlex"
         minSdk 23
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        versionCode getVersionCodeByProperty()
+        versionName getVersionNameByProperty()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    applicationVariants.configureEach { variant ->
+        variant.outputs.each { output ->
+            if (variant.buildType.name == "debug") {
+                output.versionNameOverride = "3.0"
+                output.versionCodeOverride = 3
+            }
+        }
+    }
+
     buildTypes {
+        debug {
+            versionNameSuffix "-测试包"
+        }
         release {
+            versionNameSuffix "-正式包"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
