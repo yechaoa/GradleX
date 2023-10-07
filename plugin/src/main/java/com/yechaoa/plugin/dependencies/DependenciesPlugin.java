@@ -1,8 +1,9 @@
-package com.yechaoa.plugin;
+package com.yechaoa.plugin.dependencies;
 
 
 import com.android.build.gradle.AppExtension;
 import com.android.tools.r8.graph.S;
+import com.yechaoa.plugin.dependencies.DependenciesPluginExtension;
 
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;

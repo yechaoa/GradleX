@@ -86,30 +86,12 @@ android {
     }
 }
 
-repositories {
-    // url
-}
-
 dependencies {
 
 //    implementation project(":plugin")
 
-//    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
-
-    implementation('com.squareup.retrofit2:retrofit:2.9.0') {
-//        exclude(group: "com.squareup.okhttp3", module: "okhttp")
-        transitive(false)
-    }
-
-    implementation('com.squareup.okhttp3:okhttp') {
-        version {
-            strictly("5.0.0-alpha.11")
-        }
-    }
-
-//    implementation( 'com.squareup.okhttp3:okhttp:4.10.0'){
-//        force(true)
-//    }
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation('com.squareup.retrofit2:retrofit:2.9.0')
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -120,11 +102,8 @@ dependencies {
         println("---hasProperty isTest yes")
         if (Boolean.valueOf(getProperty('isTest'))) {
             println("---isTest true")
-            // test
-//            implementation 'com.yechaoa.gradlex.devtools:devtools:1.1.1'
         } else {
             println("---isTest false")
-//            implementation 'com.yechaoa.gradlex.devtools:devtools:2.2.2'
         }
     } else {
         println("---hasProperty isTest no")
@@ -161,12 +140,3 @@ configurations.all {
 //        }
     }
 }
-
-
-//project.beforeEvaluate {
-//    println("---project：beforeEvaluate Project开始评估，对象是 = " + project.name)
-//}
-//
-//project.afterEvaluate {
-//    println("---project：afterEvaluate Project评估完毕，对象是 = " + project.name)
-//}

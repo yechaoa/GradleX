@@ -40,11 +40,6 @@ version '1.0.0'
 //}
 
 gradlePlugin {
-//    // 项目地址
-//    website = 'https://github.com/yechaoa/GradleX'
-//    // 项目仓库URI
-//    vcsUrl = 'https://github.com/yechaoa/GradleX.git'
-
     // 可以有多个plugin配置
     plugins {
         // register 这个名字可以随便填
@@ -52,20 +47,8 @@ gradlePlugin {
             // 插件id
             id = 'com.yechaoa.plugin.dependencies'
             // 插件全路径
-            implementationClass = "com.yechaoa.plugin.DependenciesPlugin"
-//            // 插件名称
-//            displayName = 'DependenciesPlugin'
-//            // 描述、简介
-//            description = 'Show Dependencies Plugin'
-//            // 插件类别，即标签、关键词的意思
-//            tags.addAll('dependencies', 'yechaoa', 'plugin')
+            implementationClass = "com.yechaoa.plugin.dependencies.DependenciesPlugin"
+
         }
     }
 }
-
-//java {
-//    withSourcesJar()
-//    withJavadocJar()
-//    sourceCompatibility = JavaVersion.VERSION_17
-//    targetCompatibility = JavaVersion.VERSION_17
-//}

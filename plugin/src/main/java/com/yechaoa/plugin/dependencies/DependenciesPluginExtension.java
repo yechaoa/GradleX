@@ -1,4 +1,4 @@
-package com.yechaoa.plugin;
+package com.yechaoa.plugin.dependencies;
 
 import org.gradle.api.provider.Property;
 
