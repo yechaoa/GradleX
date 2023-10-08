@@ -30,6 +30,13 @@ dependencyResolutionManagement {
             url './plugin/build/maven-repo'
         }
         maven { url 'https://jitpack.io' }
+
+        // 阿里云仓库
+        maven { url "https://maven.aliyun.com/nexus/content/repositories/releases" }
+
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 rootProject.name = "GradleX"

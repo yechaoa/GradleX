@@ -18,37 +18,36 @@ dependencies {
 }
 
 group 'com.yechaoa.plugin'
-version '1.0.0'
+version '1.1.0'
 
-//publishing {
-//    // 配置Plugin GAV
-//    publications {
-//        maven(MavenPublication) {
-//            groupId = group
-//            artifactId = 'dependencies'
-//            version = version
-//
-//            from components.java
-//        }
-//    }
-//    // 配置仓库地址
-//    repositories {
-//        maven {
-//            url layout.buildDirectory.dir("maven-repo")
-//        }
-//    }
-//}
+publishing {
+    // 配置Plugin GAV
+    publications {
+        maven(MavenPublication) {
+            groupId = group
+            artifactId = 'gradleX'
+            version = version
+
+            from components.java
+        }
+    }
+    // 配置仓库地址
+    repositories {
+        maven {
+            url layout.buildDirectory.dir("maven-repo")
+        }
+    }
+}
 
 gradlePlugin {
     // 可以有多个plugin配置
     plugins {
         // register 这个名字可以随便填
-        dependenciesplugin {
+        GradleXPlugin {
             // 插件id
-            id = 'com.yechaoa.plugin.dependencies'
+            id = 'com.yechaoa.plugin.gradleX'
             // 插件全路径
-            implementationClass = "com.yechaoa.plugin.dependencies.DependenciesPlugin"
-
+            implementationClass = "com.yechaoa.plugin.base.GradleXPlugin"
         }
     }
 }
