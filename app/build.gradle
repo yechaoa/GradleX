@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-//    id 'com.yechaoa.plugin.gradleX'
+    id 'com.yechaoa.plugin.gradleX'
 }
 
 /**
@@ -10,10 +10,10 @@ plugins {
  * 2.再解开这里和上面插件的注释 //id 'com.yechaoa.plugin.gradleX'
  * 3.还有project > build.gradle里面的classpath
  */
-//gradleX {
-//    printDependencies = false
-//    analysisSo = true
-//}
+gradleX {
+    printDependencies = false
+    analysisSo = true
+}
 
 /**
  * task 示例抽出去 解开注释可看效果
