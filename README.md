@@ -26,7 +26,7 @@
 - [【Gradle-9】Gradle插件发布指南](https://juejin.cn/spost/7280062870669246525)
 - [【Gradle-10】不可忽视的构建分析](https://juejin.cn/post/7282150745164005432)
 - [【Gradle-11】动态修改VersionName和VersionCode](https://juejin.cn/spost/7282691800858705957)
-- [【Gradle-12】分析so文件和依赖的关系]
+- [【Gradle-12】分析so文件和依赖的关系](https://juejin.cn/spost/7287429638019448888)
 
 ### 插件使用
 step 1
@@ -39,16 +39,17 @@ repositories {
 step 2
 ```agsl
 dependencies {
-    classpath('com.github.yechaoa.GradleX:dependencies:1.0')
+    classpath('com.github.yechaoa.GradleX:plugin:1.2')
 }
 ```
 step 3
 ```agsl
 plugins {
-    id 'com.yechaoa.plugin.dependencies'
+    id 'com.yechaoa.plugin.gradleX'
 }
 
-printDependencies {
-    enable = true
+gradleX {
+    printDependencies = false
+    analysisSo = true
 }
 ```
