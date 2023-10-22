@@ -40,7 +40,7 @@ repositories {
 step 2. Add the dependency
 ```agsl
 dependencies {
-    classpath('com.github.yechaoa.GradleX:plugin:1.4')
+    classpath('com.github.yechaoa.GradleX:plugin:1.5')
 }
 ```
 step 3. Add the Plugin Id to your build file and configure the gradleX{ } dsl
