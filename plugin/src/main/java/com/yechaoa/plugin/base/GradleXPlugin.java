@@ -4,6 +4,7 @@ package com.yechaoa.plugin.base;
 import com.android.build.gradle.AppExtension;
 import com.yechaoa.plugin.extension.CommonPluginExtension;
 
+import org.gradle.api.GradleException;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.api.artifacts.Configuration;
@@ -52,10 +53,65 @@ class GradleXPlugin implements Plugin<Project> {
                 System.out.println(TAG + "已关闭so打印");
             }
 
-        });
+            if (extension.checkSnapshot) {
+                System.out.println(TAG + "已开启snapshot版本检查");
+                checkSnapshot(project, extension.blockSnapshot);
+            } else {
+                System.out.println(TAG + "已关闭snapshot版本检查");
+            }
 
+        });
     }
 
+    /**
+     * snapshot版本检查
+     * to do ：白名单
+     * @param project       target project
+     * @param blockSnapshot 是否打断编译
+     */
+    private void checkSnapshot(Project project, boolean blockSnapshot) {
+        AppExtension androidExtension = project.getExtensions().getByType(AppExtension.class);
+        androidExtension.getApplicationVariants().all(applicationVariant -> {
+            // debug/release也可以加配置
+            System.out.println(TAG + "applicationVariant.getName() = " + applicationVariant.getName());
+            Configuration configuration = project.getConfigurations().getByName(applicationVariant.getName() + "CompileClasspath");
+
+            List<String> snapshotList = new ArrayList<>();
+
+            // 所有的依赖，包括依赖中的依赖
+            configuration.getResolvedConfiguration().getLenientConfiguration().getAllModuleDependencies().forEach(resolvedDependency -> {
+                ModuleVersionIdentifier identifier = resolvedDependency.getModule().getId();
+                if (isSnapshot(identifier.getVersion())) {
+                    snapshotList.add(identifier.getGroup() + ":" + identifier.getName() + ":" + identifier.getVersion());
+                }
+            });
+
+            if (snapshotList.size() > 0) {
+                snapshotList.forEach(System.out::println);
+                if (blockSnapshot) {
+                    blockBuilding();
+                }
+            } else {
+                System.out.println(TAG + "无SNAPSHOT版本依赖");
+            }
+        });
+    }
+
+    private void blockBuilding() {
+        String errorMassage = "检测到有SNAPSHOT版本依赖";
+        throw new GradleException(errorMassage, new Exception(errorMassage));
+    }
+
+    private boolean isSnapshot(String version) {
+        String checkRules = "SNAPSHOT";
+        return version.endsWith(checkRules) || version.contains(checkRules);
+    }
+
+    /**
+     * 分析so文件和依赖的关系
+     *
+     * @param project target project
+     */
     private void doAnalysisSo(Project project) {
         AppExtension androidExtension = project.getExtensions().getByType(AppExtension.class);
         androidExtension.getApplicationVariants().all(applicationVariant -> {
@@ -82,9 +138,14 @@ class GradleXPlugin implements Plugin<Project> {
         });
     }
 
+    /**
+     * 区分官方库和三方库的依赖
+     * to do : group可配
+     *
+     * @param project target project
+     */
     private void doPrintDependencies(Project project) {
         AppExtension androidExtension = project.getExtensions().getByType(AppExtension.class);
-
         androidExtension.getApplicationVariants().all(applicationVariant -> {
             // debug/release也可以加配置
             System.out.println(TAG + "applicationVariant.getName() = " + applicationVariant.getName());

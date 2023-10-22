@@ -7,7 +7,7 @@
 
 <img src="/pic/learning gradle.png"/>
 
-### 环境（Environment）
+### 环境（Environments）
 - Android Studio Giraffe | 2022.3.1 Patch 1
 - Android Gradle Plugin 8.1.1
 - JDK 17
@@ -27,22 +27,23 @@
 - [【Gradle-10】不可忽视的构建分析](https://juejin.cn/post/7282150745164005432)
 - [【Gradle-11】动态修改VersionName和VersionCode](https://juejin.cn/spost/7282691800858705957)
 - [【Gradle-12】分析so文件和依赖的关系](https://juejin.cn/spost/7287429638019448888)
+- [【Gradle-13】SNAPSHOT版本检查](https://juejin.cn/spost/7292416512333840438)
 
-### 插件使用
-step 1
+### 插件使用（Usage）
+step 1. Add the JitPack repository to your build file
 ```agsl
 repositories {
 	...
 	maven { url 'https://jitpack.io' }
 }
 ```
-step 2
+step 2. Add the dependency
 ```agsl
 dependencies {
-    classpath('com.github.yechaoa.GradleX:plugin:1.2')
+    classpath('com.github.yechaoa.GradleX:plugin:1.3')
 }
 ```
-step 3
+step 3. Add the Plugin Id to your build file and configure the gradleX{ } dsl
 ```agsl
 plugins {
     id 'com.yechaoa.plugin.gradleX'
@@ -51,5 +52,7 @@ plugins {
 gradleX {
     printDependencies = false
     analysisSo = true
+    checkSnapshot = true
+    blockSnapshot = false
 }
 ```

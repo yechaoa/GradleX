@@ -22,4 +22,13 @@ public class CommonPluginExtension {
      */
     public boolean analysisSo = false;
 
+    /**
+     * snapshot版本检查，默认关闭
+     */
+    public boolean checkSnapshot = false;
+
+    /**
+     * snapshot版本检查 如有，打断编译，默认关闭
+     */
+    public boolean blockSnapshot = false;
 }
