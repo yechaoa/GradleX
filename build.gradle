@@ -14,7 +14,7 @@ buildscript {
          */
 //        classpath('com.yechaoa.plugin:gradleX:1.2')
         // 远端仓库地址
-        classpath('com.github.yechaoa.GradleX:plugin:1.3')
+//        classpath('com.github.yechaoa.GradleX:plugin:1.3')
     }
 }
 

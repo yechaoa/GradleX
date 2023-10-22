@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.yechaoa.plugin.gradleX'
+//    id 'com.yechaoa.plugin.gradleX'
 }
 
 /**
@@ -13,8 +13,8 @@ plugins {
 gradleX {
     printDependencies = false
     analysisSo = true
-    checkSnapshot = true
-    blockSnapshot = false
+//    checkSnapshot = true
+//    blockSnapshot = false
 }
 
 /**
