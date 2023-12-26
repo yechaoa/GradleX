@@ -1,21 +1,145 @@
 ---Gradle：开始初始化了
----Gradle：settingsEvaluated Settings对象评估完毕
----Gradle：projectsLoaded 准备加载Project对象了
-
-> Configure project :
----Gradle：Project beforeEvaluate Project开始评估，对象是 = GradleX
----Gradle：Project afterEvaluate Project评估完毕，对象是 = GradleX
-
-> Configure project :app
----Gradle：Project beforeEvaluate Project开始评估，对象是 = app
----hasProperty isTest no
----Gradle：Project afterEvaluate Project评估完毕，对象是 = app
----project：afterEvaluate Project评估完毕，对象是 = app
 
 > Configure project :plugin
----Gradle：Project beforeEvaluate Project开始评估，对象是 = plugin
----Gradle：Project afterEvaluate Project评估完毕，对象是 = plugin
----Gradle：projectsEvaluated 所有Project对象评估完毕
+Build was configured to prefer settings repositories over project repositories but repository 'MavenRepo' was added by plugin 'com.android.internal.application'
+
+> Configure project :app
+---hasProperty isTest no
+GradleXPlugin >>>>> 已开启依赖打印
+GradleXPlugin >>>>> applicationVariant.getName() = debug
+Configuration 'debugCompileClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'debugRuntimeClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+--------------官方库 start--------------
+com.google.android.material:material:1.8.0
+androidx.appcompat:appcompat:1.5.0
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2
+androidx.core:core-ktx:1.8.0
+androidx.constraintlayout:constraintlayout:2.1.3
+org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+androidx.viewpager2:viewpager2:1.0.0
+androidx.fragment:fragment:1.3.6
+androidx.dynamicanimation:dynamicanimation:1.0.0
+androidx.drawerlayout:drawerlayout:1.1.1
+androidx.coordinatorlayout:coordinatorlayout:1.1.0
+androidx.recyclerview:recyclerview:1.1.0
+androidx.transition:transition:1.2.0
+androidx.vectordrawable:vectordrawable:1.1.0
+androidx.core:core:1.8.0
+androidx.cardview:cardview:1.0.0
+androidx.lifecycle:lifecycle-runtime:2.5.0
+androidx.annotation:annotation:1.3.0
+androidx.annotation:annotation-experimental:1.1.0
+androidx.activity:activity:1.5.0
+androidx.savedstate:savedstate:1.2.0
+androidx.appcompat:appcompat-resources:1.5.0
+androidx.cursoradapter:cursoradapter:1.0.0
+org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
+org.jetbrains:annotations:13.0
+androidx.collection:collection:1.1.0
+androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
+androidx.loader:loader:1.0.0
+androidx.lifecycle:lifecycle-viewmodel:2.5.0
+androidx.viewpager:viewpager:1.0.0
+androidx.lifecycle:lifecycle-livedata-core:2.5.0
+androidx.legacy:legacy-support-core-utils:1.0.0
+androidx.customview:customview:1.1.0
+androidx.versionedparcelable:versionedparcelable:1.1.1
+androidx.arch.core:core-common:2.1.0
+androidx.lifecycle:lifecycle-common:2.5.0
+androidx.vectordrawable:vectordrawable-animated:1.1.0
+org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
+androidx.lifecycle:lifecycle-livedata:2.0.0
+androidx.documentfile:documentfile:1.0.0
+androidx.localbroadcastmanager:localbroadcastmanager:1.0.0
+androidx.print:print:1.0.0
+androidx.interpolator:interpolator:1.0.0
+org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
+org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1
+androidx.arch.core:core-runtime:2.1.0
+org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
+--------------官方库 end--------------
+--------------三方库 start--------------
+com.squareup.okhttp3:okhttp:4.10.0
+com.aliyun.aio:AliVCSDK_Premium:6.4.0
+com.yechaoa.plugin:plugin:1.2
+com.squareup.okio:okio:3.0.0
+com.squareup.okio:okio-jvm:3.0.0
+--------------三方库 end--------------
+GradleXPlugin >>>>> applicationVariant.getName() = release
+Configuration 'releaseCompileClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+Configuration 'releaseRuntimeClasspath' was resolved during configuration time.
+This is a build performance and scalability issue.
+See https://github.com/gradle/gradle/issues/2298
+Run with --info for a stacktrace.
+--------------官方库 start--------------
+com.google.android.material:material:1.8.0
+androidx.appcompat:appcompat:1.5.0
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2
+androidx.core:core-ktx:1.8.0
+androidx.constraintlayout:constraintlayout:2.1.3
+org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+androidx.viewpager2:viewpager2:1.0.0
+androidx.fragment:fragment:1.3.6
+androidx.dynamicanimation:dynamicanimation:1.0.0
+androidx.drawerlayout:drawerlayout:1.1.1
+androidx.coordinatorlayout:coordinatorlayout:1.1.0
+androidx.recyclerview:recyclerview:1.1.0
+androidx.transition:transition:1.2.0
+androidx.vectordrawable:vectordrawable:1.1.0
+androidx.core:core:1.8.0
+androidx.cardview:cardview:1.0.0
+androidx.lifecycle:lifecycle-runtime:2.5.0
+androidx.annotation:annotation:1.3.0
+androidx.annotation:annotation-experimental:1.1.0
+androidx.activity:activity:1.5.0
+androidx.savedstate:savedstate:1.2.0
+androidx.appcompat:appcompat-resources:1.5.0
+androidx.cursoradapter:cursoradapter:1.0.0
+org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
+org.jetbrains:annotations:13.0
+androidx.collection:collection:1.1.0
+androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
+androidx.loader:loader:1.0.0
+androidx.lifecycle:lifecycle-viewmodel:2.5.0
+androidx.viewpager:viewpager:1.0.0
+androidx.lifecycle:lifecycle-livedata-core:2.5.0
+androidx.legacy:legacy-support-core-utils:1.0.0
+androidx.customview:customview:1.1.0
+androidx.versionedparcelable:versionedparcelable:1.1.1
+androidx.arch.core:core-common:2.1.0
+androidx.lifecycle:lifecycle-common:2.5.0
+androidx.vectordrawable:vectordrawable-animated:1.1.0
+org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
+androidx.lifecycle:lifecycle-livedata:2.0.0
+androidx.documentfile:documentfile:1.0.0
+androidx.localbroadcastmanager:localbroadcastmanager:1.0.0
+androidx.print:print:1.0.0
+androidx.interpolator:interpolator:1.0.0
+org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
+org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1
+androidx.arch.core:core-runtime:2.1.0
+org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
+--------------官方库 end--------------
+--------------三方库 start--------------
+com.squareup.okhttp3:okhttp:4.10.0
+com.yechaoa.plugin:plugin:1.2
+com.aliyun.aio:AliVCSDK_Premium:6.4.0
+com.squareup.okio:okio:3.0.0
+com.squareup.okio:okio-jvm:3.0.0
+--------------三方库 end--------------
+GradleXPlugin >>>>> 已关闭so打印
+GradleXPlugin >>>>> 已关闭snapshot版本检查
 
 > Task :app:dependencies
 
@@ -25,21 +149,6 @@ Project ':app'
 
 androidApis - Configuration providing various types of Android JAR file
 No dependencies
-
-androidJacocoAnt - The Jacoco agent to use to get coverage data.
-\--- org.jacoco:org.jacoco.ant:0.8.7
-     +--- org.jacoco:org.jacoco.core:0.8.7
-     |    +--- org.ow2.asm:asm:9.1
-     |    +--- org.ow2.asm:asm-commons:9.1
-     |    |    +--- org.ow2.asm:asm:9.1
-     |    |    +--- org.ow2.asm:asm-tree:9.1
-     |    |    |    \--- org.ow2.asm:asm:9.1
-     |    |    \--- org.ow2.asm:asm-analysis:9.1
-     |    |         \--- org.ow2.asm:asm-tree:9.1 (*)
-     |    \--- org.ow2.asm:asm-tree:9.1 (*)
-     +--- org.jacoco:org.jacoco.report:0.8.7
-     |    \--- org.jacoco:org.jacoco.core:0.8.7 (*)
-     \--- org.jacoco:org.jacoco.agent:0.8.7
 
 androidJdkImage - Configuration providing JDK image for compiling Java 9+ sources
 No dependencies
@@ -177,7 +286,7 @@ annotationProcessor - Classpath for the annotation processor for 'main'. (n)
 No dependencies
 
 api - API dependencies for 'main' sources. (n)
-No dependencies
+\--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 (n)
 
 apiDependenciesMetadata
 \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
@@ -187,9 +296,6 @@ apiDependenciesMetadata
      \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
           \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
 
-archives - Configuration for archive artifacts. (n)
-No dependencies
-
 compileOnly - Compile only dependencies for 'main' sources. (n)
 No dependencies
 
@@ -197,9 +303,6 @@ compileOnlyDependenciesMetadata
 No dependencies
 
 coreLibraryDesugaring - Configuration to desugar libraries
-No dependencies
-
-debugAabPublication - Bundle Publication for debug (n)
 No dependencies
 
 debugAndroidTestAnnotationProcessorClasspath - Resolved configuration for annotation-processor for variant: debugAndroidTest
@@ -229,16 +332,16 @@ debugAndroidTestCompileClasspath - Compile classpath for compilation 'debugAndro
 |    |    +--- androidx.test:monitor:1.4.0 (*)
 |    |    +--- androidx.test.services:storage:1.4.0
 |    |    |    +--- androidx.test:monitor:1.4.0 (*)
-|    |    |    \--- com.google.code.findbugs:jsr305:2.0.1
+|    |    |    \--- com.google.code.findbugs:jsr305:2.0.1 -> 3.0.2
 |    |    \--- junit:junit:4.12 (*)
 |    +--- androidx.test.espresso:espresso-idling-resource:3.4.0
-|    +--- com.squareup:javawriter:2.1.1
+|    +--- com.squareup:javawriter:2.1.1 -> 2.5.0
 |    +--- javax.inject:javax.inject:1
 |    +--- org.hamcrest:hamcrest-library:1.3
 |    |    \--- org.hamcrest:hamcrest-core:1.3
 |    +--- org.hamcrest:hamcrest-integration:1.3
 |    |    \--- org.hamcrest:hamcrest-library:1.3 (*)
-|    \--- com.google.code.findbugs:jsr305:2.0.1
+|    \--- com.google.code.findbugs:jsr305:2.0.1 -> 3.0.2
 +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
 |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
 |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
@@ -248,7 +351,12 @@ debugAndroidTestCompileClasspath - Compile classpath for compilation 'debugAndro
 +--- project :app (*)
 +--- androidx.test.ext:junit:{strictly 1.1.3} -> 1.1.3 (c)
 +--- androidx.test.espresso:espresso-core:{strictly 3.4.0} -> 3.4.0 (c)
-+--- com.squareup.retrofit2:retrofit:2.9.0
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3
+|    +--- com.squareup.okio:okio:2.8.0
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.4.0 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0 -> 1.7.10
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.10 -> 1.7.10 (*)
 +--- androidx.core:core-ktx:1.7.0
 |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.31 -> 1.7.10 (*)
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -388,17 +496,18 @@ debugAndroidTestCompileClasspath - Compile classpath for compilation 'debugAndro
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
 +--- androidx.constraintlayout:constraintlayout:2.1.3
++--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
 +--- junit:junit:{strictly 4.12} -> 4.12 (c)
 +--- androidx.test:core:{strictly 1.4.0} -> 1.4.0 (c)
 +--- androidx.test:monitor:{strictly 1.4.0} -> 1.4.0 (c)
 +--- androidx.annotation:annotation:{strictly 1.3.0} -> 1.3.0 (c)
 +--- androidx.test:runner:{strictly 1.4.0} -> 1.4.0 (c)
 +--- androidx.test.espresso:espresso-idling-resource:{strictly 3.4.0} -> 3.4.0 (c)
-+--- com.squareup:javawriter:{strictly 2.1.1} -> 2.1.1 (c)
++--- com.squareup:javawriter:{strictly 2.5.0} -> 2.5.0 (c)
 +--- javax.inject:javax.inject:{strictly 1} -> 1 (c)
 +--- org.hamcrest:hamcrest-library:{strictly 1.3} -> 1.3 (c)
 +--- org.hamcrest:hamcrest-integration:{strictly 1.3} -> 1.3 (c)
-+--- com.google.code.findbugs:jsr305:{strictly 2.0.1} -> 2.0.1 (c)
++--- com.google.code.findbugs:jsr305:{strictly 3.0.2} -> 3.0.2 (c)
 +--- org.hamcrest:hamcrest-core:{strictly 1.3} -> 1.3 (c)
 +--- androidx.lifecycle:lifecycle-common:{strictly 2.5.0} -> 2.5.0 (c)
 \--- androidx.test.services:storage:{strictly 1.4.0} -> 1.4.0 (c)
@@ -462,17 +571,20 @@ debugAndroidTestRuntimeClasspath - Runtime classpath of compilation 'debugAndroi
 |    |    +--- androidx.test:monitor:1.4.0 (*)
 |    |    +--- androidx.test.services:storage:1.4.0
 |    |    |    +--- androidx.test:monitor:1.4.0 (*)
-|    |    |    \--- com.google.code.findbugs:jsr305:2.0.1
+|    |    |    \--- com.google.code.findbugs:jsr305:2.0.1 -> 3.0.2
 |    |    \--- junit:junit:4.12 (*)
 |    +--- androidx.test.espresso:espresso-idling-resource:3.4.0
-|    +--- com.squareup:javawriter:2.1.1
+|    +--- com.squareup:javawriter:2.1.1 -> 2.5.0
 |    +--- javax.inject:javax.inject:1
 |    +--- org.hamcrest:hamcrest-library:1.3
 |    |    \--- org.hamcrest:hamcrest-core:1.3
 |    +--- org.hamcrest:hamcrest-integration:1.3
 |    |    \--- org.hamcrest:hamcrest-library:1.3 (*)
-|    \--- com.google.code.findbugs:jsr305:2.0.1
+|    \--- com.google.code.findbugs:jsr305:2.0.1 -> 3.0.2
 +--- androidx.annotation:annotation:{strictly 1.3.0} -> 1.3.0 (c)
++--- com.squareup:javawriter:{strictly 2.5.0} -> 2.5.0 (c)
++--- javax.inject:javax.inject:{strictly 1} -> 1 (c)
++--- com.google.code.findbugs:jsr305:{strictly 3.0.2} -> 3.0.2 (c)
 \--- androidx.lifecycle:lifecycle-common:{strictly 2.5.0} -> 2.5.0 (c)
 
 debugAndroidTestRuntimeOnly - Runtime only dependencies for compilation 'debugAndroidTest' (target  (androidJvm)). (n)
@@ -501,18 +613,21 @@ debugApiDependenciesMetadata
 debugApiElements - API elements for debug (n)
 No dependencies
 
-debugApkPublication - APK publication for debug (n)
-No dependencies
-
 debugCompileClasspath - Compile classpath for compilation 'debug' (target  (androidJvm)).
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.7.10} -> 1.7.10 (c)
-+--- com.squareup.retrofit2:retrofit:2.9.0
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0
+|    +--- com.squareup.okio:okio:3.0.0
+|    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -528,7 +643,7 @@ debugCompileClasspath - Compile classpath for compilation 'debug' (target  (andr
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |              \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -536,7 +651,7 @@ debugCompileClasspath - Compile classpath for compilation 'debug' (target  (andr
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
 |    |    |    +--- androidx.core:core-ktx:1.2.0 -> 1.8.0 (*)
@@ -545,8 +660,8 @@ debugCompileClasspath - Compile classpath for compilation 'debug' (target  (andr
 |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0 (*)
 |    |    |    +--- androidx.savedstate:savedstate:1.2.0
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -554,12 +669,12 @@ debugCompileClasspath - Compile classpath for compilation 'debug' (target  (andr
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -653,13 +768,16 @@ debugCompileClasspath - Compile classpath for compilation 'debug' (target  (andr
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
 +--- androidx.constraintlayout:constraintlayout:2.1.3
-+--- com.squareup.retrofit2:retrofit:{strictly 2.9.0} -> 2.9.0 (c)
++--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
++--- com.squareup.okhttp3:okhttp:{strictly 4.10.0} -> 4.10.0 (c)
 +--- androidx.core:core-ktx:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.appcompat:appcompat:{strictly 1.5.0} -> 1.5.0 (c)
 +--- com.google.android.material:material:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.constraintlayout:constraintlayout:{strictly 2.1.3} -> 2.1.3 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.7.10} -> 1.7.10 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.7.10} -> 1.7.10 (c)
++--- com.aliyun.aio:AliVCSDK_Premium:{strictly 6.4.0} -> 6.4.0 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- com.squareup.okio:okio:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.annotation:annotation:{strictly 1.3.0} -> 1.3.0 (c)
 +--- androidx.core:core:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.activity:activity:{strictly 1.5.0} -> 1.5.0 (c)
@@ -677,8 +795,9 @@ debugCompileClasspath - Compile classpath for compilation 'debug' (target  (andr
 +--- androidx.transition:transition:{strictly 1.2.0} -> 1.2.0 (c)
 +--- androidx.vectordrawable:vectordrawable:{strictly 1.1.0} -> 1.1.0 (c)
 +--- androidx.viewpager2:viewpager2:{strictly 1.0.0} -> 1.0.0 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.7.10} -> 1.7.10 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
 +--- org.jetbrains:annotations:{strictly 13.0} -> 13.0 (c)
++--- com.squareup.okio:okio-jvm:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.versionedparcelable:versionedparcelable:{strictly 1.1.1} -> 1.1.1 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel:{strictly 2.5.0} -> 2.5.0 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:{strictly 2.5.0} -> 2.5.0 (c)
@@ -718,7 +837,12 @@ debugImplementationDependenciesMetadata
 |    |    \--- org.jetbrains:annotations:13.0
 |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
 |         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3
+|    +--- com.squareup.okio:okio:2.8.0
+|    |    \--- com.squareup.okio:okio-metadata:2.8.0
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0 -> 1.7.10
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.10 -> 1.7.10 (*)
 +--- androidx.core:core-ktx:1.7.0
 |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.31 -> 1.7.10 (*)
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -856,7 +980,8 @@ debugImplementationDependenciesMetadata
 |         +--- androidx.recyclerview:recyclerview:1.1.0 (*)
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
-\--- androidx.constraintlayout:constraintlayout:2.1.3
++--- androidx.constraintlayout:constraintlayout:2.1.3
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
 
 debugIntransitiveDependenciesMetadata
 No dependencies
@@ -865,13 +990,360 @@ debugReverseMetadataValues - Metadata Values dependencies for the base Split
 No dependencies
 
 debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (androidJvm)).
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
++--- project :plugin
+|    +--- com.squareup.okhttp3:okhttp:4.10.0
+|    |    +--- com.squareup.okio:okio:3.0.0
+|    |    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    \--- com.android.tools.build:gradle:8.1.1
+|         +--- com.android.tools.build:gradle-settings-api:8.1.1
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools:sdk-common:31.1.1
+|         |    +--- com.android.tools.analytics-library:shared:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1
+|         |    |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    |    +--- com.google.guava:guava:31.1-jre
+|         |    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|         |    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|         |    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    |    +--- org.checkerframework:checker-qual:3.12.0
+|         |    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.11.0 -> 2.15.0
+|         |    |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    |    +--- net.java.dev.jna:jna-platform:5.6.0
+|         |    |    |    |    \--- net.java.dev.jna:jna:5.6.0
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- net.java.dev.jna:jna-platform:5.6.0 (*)
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469
+|         |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools:sdklib:31.1.1
+|         |    |    +--- com.android.tools:repository:31.1.1
+|         |    |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    |    +--- com.google.jimfs:jimfs:1.1
+|         |    |    |    |    \--- com.google.guava:guava:18.0 -> 31.1-jre (*)
+|         |    |    |    +--- com.sun.activation:javax.activation:1.2.0
+|         |    |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2
+|         |    |    |    |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.2
+|         |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.8
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8.1
+|         |    |    |    |    |    +--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    |    \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2 (*)
+|         |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.16
+|         |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:dvlib:31.1.1
+|         |    |    |    \--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    |    +--- org.apache.httpcomponents:httpmime:4.5.6
+|         |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.6 -> 4.5.13
+|         |    |    |         +--- org.apache.httpcomponents:httpcore:4.4.13 -> 4.4.15
+|         |    |    |         +--- commons-logging:commons-logging:1.2
+|         |    |    |         \--- commons-codec:commons-codec:1.11
+|         |    |    \--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- org.jetbrains.intellij.deps:trove4j:1.0.20200330
+|         |    +--- org.jetbrains.kotlin:kotlin-reflect:1.8.20-RC2
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- xerces:xercesImpl:2.12.0
+|         |         \--- xml-apis:xml-apis:1.4.01
+|         +--- com.android.tools:sdklib:31.1.1 (*)
+|         +--- com.android.tools:repository:31.1.1 (*)
+|         +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         +--- com.android.tools.build:aaptcompiler:8.1.1
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.analytics-library:crash:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|         |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    \--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         +--- com.android.tools.lint:lint-model:31.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.lint:lint-typedef-remover:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.ow2.asm:asm:9.2
+|         +--- androidx.databinding:databinding-compiler-common:8.1.1
+|         |    +--- androidx.databinding:databinding-common:8.1.1
+|         |    +--- com.android.databinding:baseLibrary:8.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10
+|         |    |    +--- com.google.code.gson:gson:2.8.0 -> 2.8.9
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+|         |    +--- com.squareup:javapoet:1.10.0
+|         |    +--- commons-io:commons-io:2.4
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- androidx.databinding:databinding-common:8.1.1
+|         +--- com.android.databinding:baseLibrary:8.1.1
+|         +--- com.android.tools.build:builder-test-api:8.1.1
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    \--- com.google.guava:guava:31.1-jre (*)
+|         +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         +--- com.android.tools.utp:android-device-provider-ddmlib-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-device-provider-gradle-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-additional-test-output-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-coverage-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-emulator-control-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-logcat-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-apk-installer-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-retention-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-result-listener-gradle-proto:31.1.1
+|         |    +--- io.grpc:grpc-core:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1
+|         |    |    |    +--- io.grpc:grpc-context:1.45.1
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.android:annotations:4.1.1.4
+|         |    |    +--- org.codehaus.mojo:animal-sniffer-annotations:1.19
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-netty:1.45.1
+|         |    |    +--- io.grpc:grpc-core:1.45.1 (*)
+|         |    |    +--- io.netty:netty-codec-http2:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final
+|         |    |    |    |    \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-resolver:4.1.72.Final
+|         |    |    |    |         \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-handler:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-resolver:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-tcnative-classes:2.0.46.Final
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |         \--- io.netty:netty-handler:4.1.72.Final (*)
+|         |    |    +--- io.netty:netty-handler-proxy:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec-socks:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-protobuf:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.api.grpc:proto-google-common-protos:2.0.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.13.0 -> 3.19.3
+|         |    |    +--- io.grpc:grpc-protobuf-lite:1.45.1
+|         |    |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    +--- io.grpc:grpc-stub:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- javax.annotation:javax.annotation-api:1.3.2
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.build:transform-api:2.0.0-deprecated-use-gradle-api
+|         +--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- commons-io:commons-io:2.4
+|         +--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-analysis:9.2
+|         |    \--- org.ow2.asm:asm-tree:9.2
+|         |         \--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-commons:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.ow2.asm:asm-util:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         +--- net.sf.jopt-simple:jopt-simple:4.9
+|         +--- com.android.tools.build:bundletool:1.14.0
+|         |    +--- com.android.tools.build:aapt2-proto:7.3.0-alpha07-8248216 -> 8.1.1-10154469 (*)
+|         |    +--- com.google.auto.value:auto-value-annotations:1.6.2
+|         |    +--- com.google.errorprone:error_prone_annotations:2.3.1 -> 2.15.0
+|         |    +--- com.google.guava:guava:31.0.1-jre -> 31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    +--- com.google.protobuf:protobuf-java-util:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.google.guava:guava:30.1.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1 -> 2.15.0
+|         |    |    +--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    \--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    +--- com.google.dagger:dagger:2.28.3
+|         |    |    \--- javax.inject:javax.inject:1
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.bitbucket.b_c:jose4j:0.7.0
+|         |    \--- org.slf4j:slf4j-api:1.7.30
+|         +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         +--- com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         |    +--- org.ow2.asm:asm:8.0.1 -> 9.2
+|         |    +--- org.ow2.asm:asm-util:8.0.1 -> 9.2 (*)
+|         |    +--- org.ow2.asm:asm-commons:8.0.1 -> 9.2 (*)
+|         |    +--- org.jdom:jdom2:2.0.6
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         +--- com.squareup:javapoet:1.10.0
+|         +--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.google.protobuf:protobuf-java-util:3.19.3 (*)
+|         +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         +--- io.grpc:grpc-core:1.45.1 (*)
+|         +--- io.grpc:grpc-netty:1.45.1 (*)
+|         +--- io.grpc:grpc-protobuf:1.45.1 (*)
+|         +--- io.grpc:grpc-stub:1.45.1 (*)
+|         +--- com.google.crypto.tink:tink:1.7.0
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    \--- com.google.code.gson:gson:2.8.9
+|         +--- com.google.testing.platform:core-proto:0.0.8-alpha08
+|         +--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- org.tensorflow:tensorflow-lite-metadata:0.1.0-rc2
+|         |    +--- org.checkerframework:checker-qual:2.5.8 -> 3.12.0
+|         |    \--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- com.android.tools.build:builder:8.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         |    +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|         |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android:signflinger:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    \--- com.android:zipflinger:8.1.1
+|         |    |         \--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    +--- com.android.tools.analytics-library:tracker:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    +--- commons-codec:commons-codec:1.10 -> 1.11
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.ow2.asm:asm-commons:9.2 (*)
+|         |    +--- com.android.tools.build:manifest-merger:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    \--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- com.android:zipflinger:8.1.1 (*)
+|         |    +--- com.android.tools.build:apksig:8.1.1
+|         |    +--- com.android.tools.build:apkzlib:8.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    \--- com.squareup:javawriter:2.5.0
+|         +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         \--- com.android.tools.build:gradle-api:8.1.1
+|              +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|              +--- com.google.guava:guava:31.1-jre (*)
+|              +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|              \--- org.ow2.asm:asm:9.2
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -880,7 +1352,7 @@ debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (andro
 |    |    +--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.concurrent:concurrent-futures:1.0.0
-|    |    |    +--- com.google.guava:listenablefuture:1.0
+|    |    |    +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.1 -> 2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -894,7 +1366,7 @@ debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (andro
 |    |    \--- androidx.versionedparcelable:versionedparcelable:1.1.1
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -903,7 +1375,7 @@ debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (andro
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0 (c)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
@@ -917,8 +1389,8 @@ debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (andro
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
 |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0 -> 2.5.0 (*)
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -926,14 +1398,14 @@ debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (andro
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
 |    |    +--- androidx.tracing:tracing:1.0.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -1003,7 +1475,7 @@ debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (andro
 |    +--- androidx.resourceinspection:resourceinspection-annotation:1.0.1
 |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.savedstate:savedstate:1.1.0 -> 1.2.0 (*)
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 -> 1.8.20-RC2 (*)
 |    \--- androidx.appcompat:appcompat-resources:1.5.0 (c)
 +--- com.google.android.material:material:1.8.0
 |    +--- com.google.errorprone:error_prone_annotations:2.15.0
@@ -1054,7 +1526,9 @@ debugRuntimeClasspath - Runtime classpath of compilation 'debug' (target  (andro
 |         +--- androidx.recyclerview:recyclerview:1.1.0 (*)
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
-\--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
++--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
+     \--- com.ndk.r18:cpp_shared:0.0.1
 
 debugRuntimeElements - Runtime elements for debug (n)
 No dependencies
@@ -1075,15 +1549,21 @@ debugUnitTestApiDependenciesMetadata
 No dependencies
 
 debugUnitTestCompileClasspath - Compile classpath for compilation 'debugUnitTest' (target  (androidJvm)).
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
 +--- project :app (*)
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.7.10} -> 1.7.10 (c)
-+--- com.squareup.retrofit2:retrofit:2.9.0
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0
+|    +--- com.squareup.okio:okio:3.0.0
+|    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -1099,7 +1579,7 @@ debugUnitTestCompileClasspath - Compile classpath for compilation 'debugUnitTest
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |              \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -1107,7 +1587,7 @@ debugUnitTestCompileClasspath - Compile classpath for compilation 'debugUnitTest
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
 |    |    |    +--- androidx.core:core-ktx:1.2.0 -> 1.8.0 (*)
@@ -1116,8 +1596,8 @@ debugUnitTestCompileClasspath - Compile classpath for compilation 'debugUnitTest
 |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0 (*)
 |    |    |    +--- androidx.savedstate:savedstate:1.2.0
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -1125,12 +1605,12 @@ debugUnitTestCompileClasspath - Compile classpath for compilation 'debugUnitTest
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -1224,16 +1704,19 @@ debugUnitTestCompileClasspath - Compile classpath for compilation 'debugUnitTest
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
 +--- androidx.constraintlayout:constraintlayout:2.1.3
++--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
 +--- junit:junit:4.13.2
 |    \--- org.hamcrest:hamcrest-core:1.3
-+--- com.squareup.retrofit2:retrofit:{strictly 2.9.0} -> 2.9.0 (c)
++--- com.squareup.okhttp3:okhttp:{strictly 4.10.0} -> 4.10.0 (c)
 +--- androidx.core:core-ktx:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.appcompat:appcompat:{strictly 1.5.0} -> 1.5.0 (c)
 +--- com.google.android.material:material:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.constraintlayout:constraintlayout:{strictly 2.1.3} -> 2.1.3 (c)
++--- com.aliyun.aio:AliVCSDK_Premium:{strictly 6.4.0} -> 6.4.0 (c)
 +--- junit:junit:{strictly 4.13.2} -> 4.13.2 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.7.10} -> 1.7.10 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.7.10} -> 1.7.10 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- com.squareup.okio:okio:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.annotation:annotation:{strictly 1.3.0} -> 1.3.0 (c)
 +--- androidx.core:core:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.activity:activity:{strictly 1.5.0} -> 1.5.0 (c)
@@ -1252,8 +1735,9 @@ debugUnitTestCompileClasspath - Compile classpath for compilation 'debugUnitTest
 +--- androidx.vectordrawable:vectordrawable:{strictly 1.1.0} -> 1.1.0 (c)
 +--- androidx.viewpager2:viewpager2:{strictly 1.0.0} -> 1.0.0 (c)
 +--- org.hamcrest:hamcrest-core:{strictly 1.3} -> 1.3 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.7.10} -> 1.7.10 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
 +--- org.jetbrains:annotations:{strictly 13.0} -> 13.0 (c)
++--- com.squareup.okio:okio-jvm:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.versionedparcelable:versionedparcelable:{strictly 1.1.1} -> 1.1.1 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel:{strictly 2.5.0} -> 2.5.0 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:{strictly 2.5.0} -> 2.5.0 (c)
@@ -1297,13 +1781,360 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 +--- project :app (*)
 +--- junit:junit:4.13.2
 |    \--- org.hamcrest:hamcrest-core:1.3
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
++--- project :plugin
+|    +--- com.squareup.okhttp3:okhttp:4.10.0
+|    |    +--- com.squareup.okio:okio:3.0.0
+|    |    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    \--- com.android.tools.build:gradle:8.1.1
+|         +--- com.android.tools.build:gradle-settings-api:8.1.1
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools:sdk-common:31.1.1
+|         |    +--- com.android.tools.analytics-library:shared:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1
+|         |    |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    |    +--- com.google.guava:guava:31.1-jre
+|         |    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|         |    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|         |    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    |    +--- org.checkerframework:checker-qual:3.12.0
+|         |    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.11.0 -> 2.15.0
+|         |    |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    |    +--- net.java.dev.jna:jna-platform:5.6.0
+|         |    |    |    |    \--- net.java.dev.jna:jna:5.6.0
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- net.java.dev.jna:jna-platform:5.6.0 (*)
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469
+|         |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools:sdklib:31.1.1
+|         |    |    +--- com.android.tools:repository:31.1.1
+|         |    |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    |    +--- com.google.jimfs:jimfs:1.1
+|         |    |    |    |    \--- com.google.guava:guava:18.0 -> 31.1-jre (*)
+|         |    |    |    +--- com.sun.activation:javax.activation:1.2.0
+|         |    |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2
+|         |    |    |    |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.2
+|         |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.8
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8.1
+|         |    |    |    |    |    +--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    |    \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2 (*)
+|         |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.16
+|         |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:dvlib:31.1.1
+|         |    |    |    \--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    |    +--- org.apache.httpcomponents:httpmime:4.5.6
+|         |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.6 -> 4.5.13
+|         |    |    |         +--- org.apache.httpcomponents:httpcore:4.4.13 -> 4.4.15
+|         |    |    |         +--- commons-logging:commons-logging:1.2
+|         |    |    |         \--- commons-codec:commons-codec:1.11
+|         |    |    \--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- org.jetbrains.intellij.deps:trove4j:1.0.20200330
+|         |    +--- org.jetbrains.kotlin:kotlin-reflect:1.8.20-RC2
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- xerces:xercesImpl:2.12.0
+|         |         \--- xml-apis:xml-apis:1.4.01
+|         +--- com.android.tools:sdklib:31.1.1 (*)
+|         +--- com.android.tools:repository:31.1.1 (*)
+|         +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         +--- com.android.tools.build:aaptcompiler:8.1.1
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.analytics-library:crash:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|         |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    \--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         +--- com.android.tools.lint:lint-model:31.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.lint:lint-typedef-remover:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.ow2.asm:asm:9.2
+|         +--- androidx.databinding:databinding-compiler-common:8.1.1
+|         |    +--- androidx.databinding:databinding-common:8.1.1
+|         |    +--- com.android.databinding:baseLibrary:8.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10
+|         |    |    +--- com.google.code.gson:gson:2.8.0 -> 2.8.9
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+|         |    +--- com.squareup:javapoet:1.10.0
+|         |    +--- commons-io:commons-io:2.4
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- androidx.databinding:databinding-common:8.1.1
+|         +--- com.android.databinding:baseLibrary:8.1.1
+|         +--- com.android.tools.build:builder-test-api:8.1.1
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    \--- com.google.guava:guava:31.1-jre (*)
+|         +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         +--- com.android.tools.utp:android-device-provider-ddmlib-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-device-provider-gradle-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-additional-test-output-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-coverage-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-emulator-control-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-logcat-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-apk-installer-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-retention-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-result-listener-gradle-proto:31.1.1
+|         |    +--- io.grpc:grpc-core:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1
+|         |    |    |    +--- io.grpc:grpc-context:1.45.1
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.android:annotations:4.1.1.4
+|         |    |    +--- org.codehaus.mojo:animal-sniffer-annotations:1.19
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-netty:1.45.1
+|         |    |    +--- io.grpc:grpc-core:1.45.1 (*)
+|         |    |    +--- io.netty:netty-codec-http2:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final
+|         |    |    |    |    \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-resolver:4.1.72.Final
+|         |    |    |    |         \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-handler:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-resolver:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-tcnative-classes:2.0.46.Final
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |         \--- io.netty:netty-handler:4.1.72.Final (*)
+|         |    |    +--- io.netty:netty-handler-proxy:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec-socks:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-protobuf:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.api.grpc:proto-google-common-protos:2.0.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.13.0 -> 3.19.3
+|         |    |    +--- io.grpc:grpc-protobuf-lite:1.45.1
+|         |    |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    +--- io.grpc:grpc-stub:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- javax.annotation:javax.annotation-api:1.3.2
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.build:transform-api:2.0.0-deprecated-use-gradle-api
+|         +--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- commons-io:commons-io:2.4
+|         +--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-analysis:9.2
+|         |    \--- org.ow2.asm:asm-tree:9.2
+|         |         \--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-commons:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.ow2.asm:asm-util:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         +--- net.sf.jopt-simple:jopt-simple:4.9
+|         +--- com.android.tools.build:bundletool:1.14.0
+|         |    +--- com.android.tools.build:aapt2-proto:7.3.0-alpha07-8248216 -> 8.1.1-10154469 (*)
+|         |    +--- com.google.auto.value:auto-value-annotations:1.6.2
+|         |    +--- com.google.errorprone:error_prone_annotations:2.3.1 -> 2.15.0
+|         |    +--- com.google.guava:guava:31.0.1-jre -> 31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    +--- com.google.protobuf:protobuf-java-util:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.google.guava:guava:30.1.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1 -> 2.15.0
+|         |    |    +--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    \--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    +--- com.google.dagger:dagger:2.28.3
+|         |    |    \--- javax.inject:javax.inject:1
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.bitbucket.b_c:jose4j:0.7.0
+|         |    \--- org.slf4j:slf4j-api:1.7.30
+|         +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         +--- com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         |    +--- org.ow2.asm:asm:8.0.1 -> 9.2
+|         |    +--- org.ow2.asm:asm-util:8.0.1 -> 9.2 (*)
+|         |    +--- org.ow2.asm:asm-commons:8.0.1 -> 9.2 (*)
+|         |    +--- org.jdom:jdom2:2.0.6
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         +--- com.squareup:javapoet:1.10.0
+|         +--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.google.protobuf:protobuf-java-util:3.19.3 (*)
+|         +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         +--- io.grpc:grpc-core:1.45.1 (*)
+|         +--- io.grpc:grpc-netty:1.45.1 (*)
+|         +--- io.grpc:grpc-protobuf:1.45.1 (*)
+|         +--- io.grpc:grpc-stub:1.45.1 (*)
+|         +--- com.google.crypto.tink:tink:1.7.0
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    \--- com.google.code.gson:gson:2.8.9
+|         +--- com.google.testing.platform:core-proto:0.0.8-alpha08
+|         +--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- org.tensorflow:tensorflow-lite-metadata:0.1.0-rc2
+|         |    +--- org.checkerframework:checker-qual:2.5.8 -> 3.12.0
+|         |    \--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- com.android.tools.build:builder:8.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         |    +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|         |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android:signflinger:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    \--- com.android:zipflinger:8.1.1
+|         |    |         \--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    +--- com.android.tools.analytics-library:tracker:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    +--- commons-codec:commons-codec:1.10 -> 1.11
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.ow2.asm:asm-commons:9.2 (*)
+|         |    +--- com.android.tools.build:manifest-merger:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    \--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- com.android:zipflinger:8.1.1 (*)
+|         |    +--- com.android.tools.build:apksig:8.1.1
+|         |    +--- com.android.tools.build:apkzlib:8.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    \--- com.squareup:javawriter:2.5.0
+|         +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         \--- com.android.tools.build:gradle-api:8.1.1
+|              +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|              +--- com.google.guava:guava:31.1-jre (*)
+|              +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|              \--- org.ow2.asm:asm:9.2
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -1312,7 +2143,7 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 |    |    +--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.concurrent:concurrent-futures:1.0.0
-|    |    |    +--- com.google.guava:listenablefuture:1.0
+|    |    |    +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.1 -> 2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -1326,7 +2157,7 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 |    |    \--- androidx.versionedparcelable:versionedparcelable:1.1.1
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -1335,7 +2166,7 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0 (c)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
@@ -1349,8 +2180,8 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
 |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0 -> 2.5.0 (*)
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -1358,14 +2189,14 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
 |    |    +--- androidx.tracing:tracing:1.0.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -1435,7 +2266,7 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 |    +--- androidx.resourceinspection:resourceinspection-annotation:1.0.1
 |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.savedstate:savedstate:1.1.0 -> 1.2.0 (*)
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 -> 1.8.20-RC2 (*)
 |    \--- androidx.appcompat:appcompat-resources:1.5.0 (c)
 +--- com.google.android.material:material:1.8.0
 |    +--- com.google.errorprone:error_prone_annotations:2.15.0
@@ -1486,7 +2317,9 @@ debugUnitTestRuntimeClasspath - Runtime classpath of compilation 'debugUnitTest'
 |         +--- androidx.recyclerview:recyclerview:1.1.0 (*)
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
-\--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
++--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
+     \--- com.ndk.r18:cpp_shared:0.0.1
 
 debugUnitTestRuntimeOnly - Runtime only dependencies for compilation 'debugUnitTest' (target  (androidJvm)). (n)
 No dependencies
@@ -1500,15 +2333,15 @@ No dependencies
 debugWearBundling - Resolved Configuration for wear app bundling for variant: debug
 No dependencies
 
-default - Configuration for default artifacts. (n)
-No dependencies
-
 implementation - Implementation only dependencies for 'main' sources. (n)
-+--- com.squareup.retrofit2:retrofit:2.9.0 (n)
++--- unspecified (n)
++--- project plugin (n)
++--- com.squareup.okhttp3:okhttp:4.9.3 (n)
 +--- androidx.core:core-ktx:1.7.0 (n)
 +--- androidx.appcompat:appcompat:1.4.1 (n)
 +--- com.google.android.material:material:1.8.0 (n)
-\--- androidx.constraintlayout:constraintlayout:2.1.3 (n)
++--- androidx.constraintlayout:constraintlayout:2.1.3 (n)
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0 (n)
 
 implementationDependenciesMetadata
 +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
@@ -1517,7 +2350,12 @@ implementationDependenciesMetadata
 |    |    \--- org.jetbrains:annotations:13.0
 |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
 |         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3
+|    +--- com.squareup.okio:okio:2.8.0
+|    |    \--- com.squareup.okio:okio-metadata:2.8.0
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0 -> 1.7.10
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.10 -> 1.7.10 (*)
 +--- androidx.core:core-ktx:1.7.0
 |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.31 -> 1.7.10 (*)
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -1655,7 +2493,8 @@ implementationDependenciesMetadata
 |         +--- androidx.recyclerview:recyclerview:1.1.0 (*)
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
-\--- androidx.constraintlayout:constraintlayout:2.1.3
++--- androidx.constraintlayout:constraintlayout:2.1.3
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
 
 intransitiveDependenciesMetadata
 No dependencies
@@ -1713,9 +2552,6 @@ No dependencies
 lintPublish - Configuration to publish external lint check jar
 No dependencies
 
-releaseAabPublication - Bundle Publication for release (n)
-No dependencies
-
 releaseAnnotationProcessor - Classpath for the annotation processor for 'release'. (n)
 No dependencies
 
@@ -1736,17 +2572,20 @@ releaseApiDependenciesMetadata
 releaseApiElements - API elements for release (n)
 No dependencies
 
-releaseApkPublication - APK publication for release (n)
-No dependencies
-
 releaseCompileClasspath - Compile classpath for compilation 'release' (target  (androidJvm)).
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0
+|    +--- com.squareup.okio:okio:3.0.0
+|    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -1762,7 +2601,7 @@ releaseCompileClasspath - Compile classpath for compilation 'release' (target  (
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |              \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -1770,7 +2609,7 @@ releaseCompileClasspath - Compile classpath for compilation 'release' (target  (
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
 |    |    |    +--- androidx.core:core-ktx:1.2.0 -> 1.8.0 (*)
@@ -1779,8 +2618,8 @@ releaseCompileClasspath - Compile classpath for compilation 'release' (target  (
 |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0 (*)
 |    |    |    +--- androidx.savedstate:savedstate:1.2.0
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -1788,12 +2627,12 @@ releaseCompileClasspath - Compile classpath for compilation 'release' (target  (
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -1887,14 +2726,17 @@ releaseCompileClasspath - Compile classpath for compilation 'release' (target  (
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
 +--- androidx.constraintlayout:constraintlayout:2.1.3
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.7.10} -> 1.7.10 (c)
-+--- com.squareup.retrofit2:retrofit:{strictly 2.9.0} -> 2.9.0 (c)
++--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- com.squareup.okhttp3:okhttp:{strictly 4.10.0} -> 4.10.0 (c)
 +--- androidx.core:core-ktx:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.appcompat:appcompat:{strictly 1.5.0} -> 1.5.0 (c)
 +--- com.google.android.material:material:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.constraintlayout:constraintlayout:{strictly 2.1.3} -> 2.1.3 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.7.10} -> 1.7.10 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.7.10} -> 1.7.10 (c)
++--- com.aliyun.aio:AliVCSDK_Premium:{strictly 6.4.0} -> 6.4.0 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- com.squareup.okio:okio:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.annotation:annotation:{strictly 1.3.0} -> 1.3.0 (c)
 +--- androidx.core:core:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.activity:activity:{strictly 1.5.0} -> 1.5.0 (c)
@@ -1912,8 +2754,9 @@ releaseCompileClasspath - Compile classpath for compilation 'release' (target  (
 +--- androidx.transition:transition:{strictly 1.2.0} -> 1.2.0 (c)
 +--- androidx.vectordrawable:vectordrawable:{strictly 1.1.0} -> 1.1.0 (c)
 +--- androidx.viewpager2:viewpager2:{strictly 1.0.0} -> 1.0.0 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.7.10} -> 1.7.10 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
 +--- org.jetbrains:annotations:{strictly 13.0} -> 13.0 (c)
++--- com.squareup.okio:okio-jvm:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.versionedparcelable:versionedparcelable:{strictly 1.1.1} -> 1.1.1 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel:{strictly 2.5.0} -> 2.5.0 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:{strictly 2.5.0} -> 2.5.0 (c)
@@ -1953,7 +2796,12 @@ releaseImplementationDependenciesMetadata
 |    |    \--- org.jetbrains:annotations:13.0
 |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
 |         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3
+|    +--- com.squareup.okio:okio:2.8.0
+|    |    \--- com.squareup.okio:okio-metadata:2.8.0
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0 -> 1.7.10
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.4.10 -> 1.7.10 (*)
 +--- androidx.core:core-ktx:1.7.0
 |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.5.31 -> 1.7.10 (*)
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -2091,7 +2939,8 @@ releaseImplementationDependenciesMetadata
 |         +--- androidx.recyclerview:recyclerview:1.1.0 (*)
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
-\--- androidx.constraintlayout:constraintlayout:2.1.3
++--- androidx.constraintlayout:constraintlayout:2.1.3
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
 
 releaseIntransitiveDependenciesMetadata
 No dependencies
@@ -2100,13 +2949,360 @@ releaseReverseMetadataValues - Metadata Values dependencies for the base Split
 No dependencies
 
 releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (androidJvm)).
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
++--- project :plugin
+|    +--- com.squareup.okhttp3:okhttp:4.10.0
+|    |    +--- com.squareup.okio:okio:3.0.0
+|    |    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    \--- com.android.tools.build:gradle:8.1.1
+|         +--- com.android.tools.build:gradle-settings-api:8.1.1
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools:sdk-common:31.1.1
+|         |    +--- com.android.tools.analytics-library:shared:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1
+|         |    |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    |    +--- com.google.guava:guava:31.1-jre
+|         |    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|         |    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|         |    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    |    +--- org.checkerframework:checker-qual:3.12.0
+|         |    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.11.0 -> 2.15.0
+|         |    |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    |    +--- net.java.dev.jna:jna-platform:5.6.0
+|         |    |    |    |    \--- net.java.dev.jna:jna:5.6.0
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- net.java.dev.jna:jna-platform:5.6.0 (*)
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469
+|         |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools:sdklib:31.1.1
+|         |    |    +--- com.android.tools:repository:31.1.1
+|         |    |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    |    +--- com.google.jimfs:jimfs:1.1
+|         |    |    |    |    \--- com.google.guava:guava:18.0 -> 31.1-jre (*)
+|         |    |    |    +--- com.sun.activation:javax.activation:1.2.0
+|         |    |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2
+|         |    |    |    |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.2
+|         |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.8
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8.1
+|         |    |    |    |    |    +--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    |    \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2 (*)
+|         |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.16
+|         |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:dvlib:31.1.1
+|         |    |    |    \--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    |    +--- org.apache.httpcomponents:httpmime:4.5.6
+|         |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.6 -> 4.5.13
+|         |    |    |         +--- org.apache.httpcomponents:httpcore:4.4.13 -> 4.4.15
+|         |    |    |         +--- commons-logging:commons-logging:1.2
+|         |    |    |         \--- commons-codec:commons-codec:1.11
+|         |    |    \--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- org.jetbrains.intellij.deps:trove4j:1.0.20200330
+|         |    +--- org.jetbrains.kotlin:kotlin-reflect:1.8.20-RC2
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- xerces:xercesImpl:2.12.0
+|         |         \--- xml-apis:xml-apis:1.4.01
+|         +--- com.android.tools:sdklib:31.1.1 (*)
+|         +--- com.android.tools:repository:31.1.1 (*)
+|         +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         +--- com.android.tools.build:aaptcompiler:8.1.1
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.analytics-library:crash:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|         |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    \--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         +--- com.android.tools.lint:lint-model:31.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.lint:lint-typedef-remover:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.ow2.asm:asm:9.2
+|         +--- androidx.databinding:databinding-compiler-common:8.1.1
+|         |    +--- androidx.databinding:databinding-common:8.1.1
+|         |    +--- com.android.databinding:baseLibrary:8.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10
+|         |    |    +--- com.google.code.gson:gson:2.8.0 -> 2.8.9
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+|         |    +--- com.squareup:javapoet:1.10.0
+|         |    +--- commons-io:commons-io:2.4
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- androidx.databinding:databinding-common:8.1.1
+|         +--- com.android.databinding:baseLibrary:8.1.1
+|         +--- com.android.tools.build:builder-test-api:8.1.1
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    \--- com.google.guava:guava:31.1-jre (*)
+|         +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         +--- com.android.tools.utp:android-device-provider-ddmlib-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-device-provider-gradle-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-additional-test-output-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-coverage-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-emulator-control-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-logcat-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-apk-installer-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-retention-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-result-listener-gradle-proto:31.1.1
+|         |    +--- io.grpc:grpc-core:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1
+|         |    |    |    +--- io.grpc:grpc-context:1.45.1
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.android:annotations:4.1.1.4
+|         |    |    +--- org.codehaus.mojo:animal-sniffer-annotations:1.19
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-netty:1.45.1
+|         |    |    +--- io.grpc:grpc-core:1.45.1 (*)
+|         |    |    +--- io.netty:netty-codec-http2:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final
+|         |    |    |    |    \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-resolver:4.1.72.Final
+|         |    |    |    |         \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-handler:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-resolver:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-tcnative-classes:2.0.46.Final
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |         \--- io.netty:netty-handler:4.1.72.Final (*)
+|         |    |    +--- io.netty:netty-handler-proxy:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec-socks:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-protobuf:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.api.grpc:proto-google-common-protos:2.0.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.13.0 -> 3.19.3
+|         |    |    +--- io.grpc:grpc-protobuf-lite:1.45.1
+|         |    |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    +--- io.grpc:grpc-stub:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- javax.annotation:javax.annotation-api:1.3.2
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.build:transform-api:2.0.0-deprecated-use-gradle-api
+|         +--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- commons-io:commons-io:2.4
+|         +--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-analysis:9.2
+|         |    \--- org.ow2.asm:asm-tree:9.2
+|         |         \--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-commons:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.ow2.asm:asm-util:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         +--- net.sf.jopt-simple:jopt-simple:4.9
+|         +--- com.android.tools.build:bundletool:1.14.0
+|         |    +--- com.android.tools.build:aapt2-proto:7.3.0-alpha07-8248216 -> 8.1.1-10154469 (*)
+|         |    +--- com.google.auto.value:auto-value-annotations:1.6.2
+|         |    +--- com.google.errorprone:error_prone_annotations:2.3.1 -> 2.15.0
+|         |    +--- com.google.guava:guava:31.0.1-jre -> 31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    +--- com.google.protobuf:protobuf-java-util:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.google.guava:guava:30.1.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1 -> 2.15.0
+|         |    |    +--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    \--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    +--- com.google.dagger:dagger:2.28.3
+|         |    |    \--- javax.inject:javax.inject:1
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.bitbucket.b_c:jose4j:0.7.0
+|         |    \--- org.slf4j:slf4j-api:1.7.30
+|         +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         +--- com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         |    +--- org.ow2.asm:asm:8.0.1 -> 9.2
+|         |    +--- org.ow2.asm:asm-util:8.0.1 -> 9.2 (*)
+|         |    +--- org.ow2.asm:asm-commons:8.0.1 -> 9.2 (*)
+|         |    +--- org.jdom:jdom2:2.0.6
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         +--- com.squareup:javapoet:1.10.0
+|         +--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.google.protobuf:protobuf-java-util:3.19.3 (*)
+|         +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         +--- io.grpc:grpc-core:1.45.1 (*)
+|         +--- io.grpc:grpc-netty:1.45.1 (*)
+|         +--- io.grpc:grpc-protobuf:1.45.1 (*)
+|         +--- io.grpc:grpc-stub:1.45.1 (*)
+|         +--- com.google.crypto.tink:tink:1.7.0
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    \--- com.google.code.gson:gson:2.8.9
+|         +--- com.google.testing.platform:core-proto:0.0.8-alpha08
+|         +--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- org.tensorflow:tensorflow-lite-metadata:0.1.0-rc2
+|         |    +--- org.checkerframework:checker-qual:2.5.8 -> 3.12.0
+|         |    \--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- com.android.tools.build:builder:8.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         |    +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|         |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android:signflinger:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    \--- com.android:zipflinger:8.1.1
+|         |    |         \--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    +--- com.android.tools.analytics-library:tracker:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    +--- commons-codec:commons-codec:1.10 -> 1.11
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.ow2.asm:asm-commons:9.2 (*)
+|         |    +--- com.android.tools.build:manifest-merger:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    \--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- com.android:zipflinger:8.1.1 (*)
+|         |    +--- com.android.tools.build:apksig:8.1.1
+|         |    +--- com.android.tools.build:apkzlib:8.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    \--- com.squareup:javawriter:2.5.0
+|         +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         \--- com.android.tools.build:gradle-api:8.1.1
+|              +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|              +--- com.google.guava:guava:31.1-jre (*)
+|              +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|              \--- org.ow2.asm:asm:9.2
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -2115,7 +3311,7 @@ releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (a
 |    |    +--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.concurrent:concurrent-futures:1.0.0
-|    |    |    +--- com.google.guava:listenablefuture:1.0
+|    |    |    +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.1 -> 2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -2129,7 +3325,7 @@ releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (a
 |    |    \--- androidx.versionedparcelable:versionedparcelable:1.1.1
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -2138,7 +3334,7 @@ releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (a
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0 (c)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
@@ -2152,8 +3348,8 @@ releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (a
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
 |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0 -> 2.5.0 (*)
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -2161,14 +3357,14 @@ releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (a
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
 |    |    +--- androidx.tracing:tracing:1.0.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -2238,7 +3434,7 @@ releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (a
 |    +--- androidx.resourceinspection:resourceinspection-annotation:1.0.1
 |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.savedstate:savedstate:1.1.0 -> 1.2.0 (*)
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 -> 1.8.20-RC2 (*)
 |    \--- androidx.appcompat:appcompat-resources:1.5.0 (c)
 +--- com.google.android.material:material:1.8.0
 |    +--- com.google.errorprone:error_prone_annotations:2.15.0
@@ -2289,7 +3485,9 @@ releaseRuntimeClasspath - Runtime classpath of compilation 'release' (target  (a
 |         +--- androidx.recyclerview:recyclerview:1.1.0 (*)
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
-\--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
++--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
+     \--- com.ndk.r18:cpp_shared:0.0.1
 
 releaseRuntimeElements - Runtime elements for release (n)
 No dependencies
@@ -2310,13 +3508,19 @@ releaseUnitTestApiDependenciesMetadata
 No dependencies
 
 releaseUnitTestCompileClasspath - Compile classpath for compilation 'releaseUnitTest' (target  (androidJvm)).
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
++--- project :plugin
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0
+|    +--- com.squareup.okio:okio:3.0.0
+|    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -2332,7 +3536,7 @@ releaseUnitTestCompileClasspath - Compile classpath for compilation 'releaseUnit
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |              \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -2340,7 +3544,7 @@ releaseUnitTestCompileClasspath - Compile classpath for compilation 'releaseUnit
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
 |    |    |    +--- androidx.core:core-ktx:1.2.0 -> 1.8.0 (*)
@@ -2349,8 +3553,8 @@ releaseUnitTestCompileClasspath - Compile classpath for compilation 'releaseUnit
 |    |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0 (*)
 |    |    |    +--- androidx.savedstate:savedstate:1.2.0
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -2358,12 +3562,12 @@ releaseUnitTestCompileClasspath - Compile classpath for compilation 'releaseUnit
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -2457,18 +3661,21 @@ releaseUnitTestCompileClasspath - Compile classpath for compilation 'releaseUnit
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
 +--- androidx.constraintlayout:constraintlayout:2.1.3
++--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
 +--- project :app (*)
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.7.10} -> 1.7.10 (c)
-+--- com.squareup.retrofit2:retrofit:{strictly 2.9.0} -> 2.9.0 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- com.squareup.okhttp3:okhttp:{strictly 4.10.0} -> 4.10.0 (c)
 +--- androidx.core:core-ktx:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.appcompat:appcompat:{strictly 1.5.0} -> 1.5.0 (c)
 +--- com.google.android.material:material:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.constraintlayout:constraintlayout:{strictly 2.1.3} -> 2.1.3 (c)
++--- com.aliyun.aio:AliVCSDK_Premium:{strictly 6.4.0} -> 6.4.0 (c)
 +--- junit:junit:4.13.2
 |    \--- org.hamcrest:hamcrest-core:1.3
 +--- junit:junit:{strictly 4.13.2} -> 4.13.2 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.7.10} -> 1.7.10 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.7.10} -> 1.7.10 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
++--- com.squareup.okio:okio:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.annotation:annotation:{strictly 1.3.0} -> 1.3.0 (c)
 +--- androidx.core:core:{strictly 1.8.0} -> 1.8.0 (c)
 +--- androidx.activity:activity:{strictly 1.5.0} -> 1.5.0 (c)
@@ -2487,8 +3694,9 @@ releaseUnitTestCompileClasspath - Compile classpath for compilation 'releaseUnit
 +--- androidx.vectordrawable:vectordrawable:{strictly 1.1.0} -> 1.1.0 (c)
 +--- androidx.viewpager2:viewpager2:{strictly 1.0.0} -> 1.0.0 (c)
 +--- org.hamcrest:hamcrest-core:{strictly 1.3} -> 1.3 (c)
-+--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.7.10} -> 1.7.10 (c)
++--- org.jetbrains.kotlin:kotlin-stdlib-common:{strictly 1.8.20-RC2} -> 1.8.20-RC2 (c)
 +--- org.jetbrains:annotations:{strictly 13.0} -> 13.0 (c)
++--- com.squareup.okio:okio-jvm:{strictly 3.0.0} -> 3.0.0 (c)
 +--- androidx.versionedparcelable:versionedparcelable:{strictly 1.1.1} -> 1.1.1 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel:{strictly 2.5.0} -> 2.5.0 (c)
 +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:{strictly 2.5.0} -> 2.5.0 (c)
@@ -2532,13 +3740,360 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 +--- project :app (*)
 +--- junit:junit:4.13.2
 |    \--- org.hamcrest:hamcrest-core:1.3
-+--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10
-|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10
++--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10 -> 1.8.20-RC2
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2
+|    |    +--- org.jetbrains.kotlin:kotlin-stdlib-common:1.8.20-RC2
 |    |    \--- org.jetbrains:annotations:13.0
-|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10
-|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
-+--- com.squareup.retrofit2:retrofit:2.9.0
+|    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20-RC2
+|         \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
++--- project :plugin
+|    +--- com.squareup.okhttp3:okhttp:4.10.0
+|    |    +--- com.squareup.okio:okio:3.0.0
+|    |    |    \--- com.squareup.okio:okio-jvm:3.0.0
+|    |    |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31 -> 1.8.20-RC2 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31 -> 1.8.20-RC2
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    \--- com.android.tools.build:gradle:8.1.1
+|         +--- com.android.tools.build:gradle-settings-api:8.1.1
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools:sdk-common:31.1.1
+|         |    +--- com.android.tools.analytics-library:shared:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1
+|         |    |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    |    +--- com.google.guava:guava:31.1-jre
+|         |    |    |    |    +--- com.google.guava:failureaccess:1.0.1
+|         |    |    |    |    +--- com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+|         |    |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    |    +--- org.checkerframework:checker-qual:3.12.0
+|         |    |    |    |    +--- com.google.errorprone:error_prone_annotations:2.11.0 -> 2.15.0
+|         |    |    |    |    \--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    |    +--- net.java.dev.jna:jna-platform:5.6.0
+|         |    |    |    |    \--- net.java.dev.jna:jna:5.6.0
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- net.java.dev.jna:jna-platform:5.6.0 (*)
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469
+|         |    |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    |    \--- org.jetbrains:annotations:13.0
+|         |    +--- com.android.tools:sdklib:31.1.1
+|         |    |    +--- com.android.tools:repository:31.1.1
+|         |    |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    |    +--- com.google.jimfs:jimfs:1.1
+|         |    |    |    |    \--- com.google.guava:guava:18.0 -> 31.1-jre (*)
+|         |    |    |    +--- com.sun.activation:javax.activation:1.2.0
+|         |    |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2
+|         |    |    |    |    +--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.glassfish.jaxb:txw2:2.3.2
+|         |    |    |    |    +--- com.sun.istack:istack-commons-runtime:3.0.8
+|         |    |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    +--- org.jvnet.staxex:stax-ex:1.8.1
+|         |    |    |    |    |    +--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    |    |    \--- jakarta.xml.bind:jakarta.xml.bind-api:2.3.2 (*)
+|         |    |    |    |    +--- com.sun.xml.fastinfoset:FastInfoset:1.2.16
+|         |    |    |    |    \--- jakarta.activation:jakarta.activation-api:1.2.1
+|         |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:dvlib:31.1.1
+|         |    |    |    \--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- org.apache.commons:commons-compress:1.21
+|         |    |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    |    +--- org.apache.httpcomponents:httpmime:4.5.6
+|         |    |    |    \--- org.apache.httpcomponents:httpclient:4.5.6 -> 4.5.13
+|         |    |    |         +--- org.apache.httpcomponents:httpcore:4.4.13 -> 4.4.15
+|         |    |    |         +--- commons-logging:commons-logging:1.2
+|         |    |    |         \--- commons-codec:commons-codec:1.11
+|         |    |    \--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    +--- org.jetbrains.intellij.deps:trove4j:1.0.20200330
+|         |    +--- org.jetbrains.kotlin:kotlin-reflect:1.8.20-RC2
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.8.20-RC2 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- xerces:xercesImpl:2.12.0
+|         |         \--- xml-apis:xml-apis:1.4.01
+|         +--- com.android.tools:sdklib:31.1.1 (*)
+|         +--- com.android.tools:repository:31.1.1 (*)
+|         +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         +--- com.android.tools.build:aaptcompiler:8.1.1
+|         |    +--- com.android.tools.build:aapt2-proto:8.1.1-10154469 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.analytics-library:crash:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- org.apache.httpcomponents:httpclient:4.5.13 (*)
+|         |    +--- org.apache.httpcomponents:httpcore:4.4.15
+|         |    \--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         +--- com.android.tools.lint:lint-model:31.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- net.sf.kxml:kxml2:2.3.0
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.lint:lint-typedef-remover:31.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    \--- org.ow2.asm:asm:9.2
+|         +--- androidx.databinding:databinding-compiler-common:8.1.1
+|         |    +--- androidx.databinding:databinding-common:8.1.1
+|         |    +--- com.android.databinding:baseLibrary:8.1.1
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10
+|         |    |    +--- com.google.code.gson:gson:2.8.0 -> 2.8.9
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- com.googlecode.juniversalchardet:juniversalchardet:1.0.3
+|         |    +--- com.squareup:javapoet:1.10.0
+|         |    +--- commons-io:commons-io:2.4
+|         |    +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- androidx.databinding:databinding-common:8.1.1
+|         +--- com.android.databinding:baseLibrary:8.1.1
+|         +--- com.android.tools.build:builder-test-api:8.1.1
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    \--- com.google.guava:guava:31.1-jre (*)
+|         +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         +--- com.android.tools.utp:android-device-provider-ddmlib-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-device-provider-gradle-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-additional-test-output-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-coverage-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-emulator-control-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-logcat-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-apk-installer-proto:31.1.1
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-host-retention-proto:31.1.1
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.android.tools.utp:android-test-plugin-result-listener-gradle-proto:31.1.1
+|         |    +--- io.grpc:grpc-core:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1
+|         |    |    |    +--- io.grpc:grpc-context:1.45.1
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.9
+|         |    |    +--- com.google.android:annotations:4.1.1.4
+|         |    |    +--- org.codehaus.mojo:animal-sniffer-annotations:1.19
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-netty:1.45.1
+|         |    |    +--- io.grpc:grpc-core:1.45.1 (*)
+|         |    |    +--- io.netty:netty-codec-http2:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final
+|         |    |    |    |    \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-resolver:4.1.72.Final
+|         |    |    |    |         \--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-handler:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-resolver:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-tcnative-classes:2.0.46.Final
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |         +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |         +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |         \--- io.netty:netty-handler:4.1.72.Final (*)
+|         |    |    +--- io.netty:netty-handler-proxy:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    +--- io.netty:netty-codec-socks:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-common:4.1.72.Final
+|         |    |    |    |    +--- io.netty:netty-buffer:4.1.72.Final (*)
+|         |    |    |    |    +--- io.netty:netty-transport:4.1.72.Final (*)
+|         |    |    |    |    \--- io.netty:netty-codec:4.1.72.Final (*)
+|         |    |    |    \--- io.netty:netty-codec-http:4.1.72.Final (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    |    \--- io.perfmark:perfmark-api:0.23.0
+|         |    +--- io.grpc:grpc-protobuf:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.api.grpc:proto-google-common-protos:2.0.1
+|         |    |    |    \--- com.google.protobuf:protobuf-java:3.13.0 -> 3.19.3
+|         |    |    +--- io.grpc:grpc-protobuf-lite:1.45.1
+|         |    |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    +--- io.grpc:grpc-stub:1.45.1
+|         |    |    +--- io.grpc:grpc-api:1.45.1 (*)
+|         |    |    +--- com.google.guava:guava:31.0.1-android -> 31.1-jre (*)
+|         |    |    \--- com.google.errorprone:error_prone_annotations:2.10.0 -> 2.15.0
+|         |    +--- com.google.code.gson:gson:2.8.9
+|         |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    +--- javax.annotation:javax.annotation-api:1.3.2
+|         |    \--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         +--- com.android.tools.build:transform-api:2.0.0-deprecated-use-gradle-api
+|         +--- org.apache.httpcomponents:httpmime:4.5.6 (*)
+|         +--- commons-io:commons-io:2.4
+|         +--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-analysis:9.2
+|         |    \--- org.ow2.asm:asm-tree:9.2
+|         |         \--- org.ow2.asm:asm:9.2
+|         +--- org.ow2.asm:asm-commons:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.ow2.asm:asm-util:9.2
+|         |    +--- org.ow2.asm:asm:9.2
+|         |    +--- org.ow2.asm:asm-tree:9.2 (*)
+|         |    \--- org.ow2.asm:asm-analysis:9.2 (*)
+|         +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         +--- org.glassfish.jaxb:jaxb-runtime:2.3.2 (*)
+|         +--- net.sf.jopt-simple:jopt-simple:4.9
+|         +--- com.android.tools.build:bundletool:1.14.0
+|         |    +--- com.android.tools.build:aapt2-proto:7.3.0-alpha07-8248216 -> 8.1.1-10154469 (*)
+|         |    +--- com.google.auto.value:auto-value-annotations:1.6.2
+|         |    +--- com.google.errorprone:error_prone_annotations:2.3.1 -> 2.15.0
+|         |    +--- com.google.guava:guava:31.0.1-jre -> 31.1-jre (*)
+|         |    +--- com.google.protobuf:protobuf-java:3.19.2 -> 3.19.3
+|         |    +--- com.google.protobuf:protobuf-java-util:3.19.2 -> 3.19.3
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    +--- com.google.guava:guava:30.1.1-android -> 31.1-jre (*)
+|         |    |    +--- com.google.errorprone:error_prone_annotations:2.5.1 -> 2.15.0
+|         |    |    +--- com.google.j2objc:j2objc-annotations:1.3
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    \--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    +--- com.google.dagger:dagger:2.28.3
+|         |    |    \--- javax.inject:javax.inject:1
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.bitbucket.b_c:jose4j:0.7.0
+|         |    \--- org.slf4j:slf4j-api:1.7.30
+|         +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         +--- com.android.tools.build.jetifier:jetifier-processor:1.0.0-beta10
+|         |    +--- com.android.tools.build.jetifier:jetifier-core:1.0.0-beta10 (*)
+|         |    +--- org.ow2.asm:asm:8.0.1 -> 9.2
+|         |    +--- org.ow2.asm:asm-util:8.0.1 -> 9.2 (*)
+|         |    +--- org.ow2.asm:asm-commons:8.0.1 -> 9.2 (*)
+|         |    +--- org.jdom:jdom2:2.0.6
+|         |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.3.71 -> 1.8.20-RC2 (*)
+|         +--- com.squareup:javapoet:1.10.0
+|         +--- com.google.protobuf:protobuf-java:3.19.3
+|         +--- com.google.protobuf:protobuf-java-util:3.19.3 (*)
+|         +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         +--- io.grpc:grpc-core:1.45.1 (*)
+|         +--- io.grpc:grpc-netty:1.45.1 (*)
+|         +--- io.grpc:grpc-protobuf:1.45.1 (*)
+|         +--- io.grpc:grpc-stub:1.45.1 (*)
+|         +--- com.google.crypto.tink:tink:1.7.0
+|         |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    \--- com.google.code.gson:gson:2.8.9
+|         +--- com.google.testing.platform:core-proto:0.0.8-alpha08
+|         +--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- org.tensorflow:tensorflow-lite-metadata:0.1.0-rc2
+|         |    +--- org.checkerframework:checker-qual:2.5.8 -> 3.12.0
+|         |    \--- com.google.flatbuffers:flatbuffers-java:1.12.0
+|         +--- com.android.tools.build:builder:8.1.1
+|         |    +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         |    +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|         |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    +--- com.android.tools:common:31.1.1 (*)
+|         |    +--- com.android.tools.ddms:ddmlib:31.1.1 (*)
+|         |    +--- com.android:signflinger:8.1.1
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    \--- com.android:zipflinger:8.1.1
+|         |    |         \--- com.android.tools:annotations:31.1.1
+|         |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    +--- com.android.tools.analytics-library:tracker:31.1.1
+|         |    |    +--- com.android.tools.analytics-library:protos:31.1.1 (*)
+|         |    |    +--- com.android.tools.analytics-library:shared:31.1.1 (*)
+|         |    |    +--- com.android.tools:annotations:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- com.google.protobuf:protobuf-java:3.19.3
+|         |    |    \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- com.android.tools.layoutlib:layoutlib-api:31.1.1 (*)
+|         |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    +--- commons-codec:commons-codec:1.10 -> 1.11
+|         |    +--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    +--- javax.inject:javax.inject:1
+|         |    +--- org.ow2.asm:asm-commons:9.2 (*)
+|         |    +--- com.android.tools.build:manifest-merger:31.1.1
+|         |    |    +--- com.android.tools:common:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdklib:31.1.1 (*)
+|         |    |    +--- com.android.tools:sdk-common:31.1.1 (*)
+|         |    |    +--- com.google.code.gson:gson:2.8.6 -> 2.8.9
+|         |    |    +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|         |    |    \--- net.sf.kxml:kxml2:2.3.0
+|         |    +--- com.android:zipflinger:8.1.1 (*)
+|         |    +--- com.android.tools.build:apksig:8.1.1
+|         |    +--- com.android.tools.build:apkzlib:8.1.1
+|         |    |    +--- com.android.tools.build:apksig:8.1.1
+|         |    |    +--- com.google.code.findbugs:jsr305:3.0.2
+|         |    |    +--- com.google.guava:guava:31.1-jre (*)
+|         |    |    +--- org.bouncycastle:bcpkix-jdk15on:1.67 (*)
+|         |    |    \--- org.bouncycastle:bcprov-jdk15on:1.67
+|         |    \--- com.squareup:javawriter:2.5.0
+|         +--- com.android.tools.build:builder-model:8.1.1 (*)
+|         \--- com.android.tools.build:gradle-api:8.1.1
+|              +--- com.android.tools.build:builder-test-api:8.1.1 (*)
+|              +--- com.google.guava:guava:31.1-jre (*)
+|              +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20-RC2 (*)
+|              \--- org.ow2.asm:asm:9.2
++--- com.squareup.okhttp3:okhttp:4.9.3 -> 4.10.0 (*)
 +--- androidx.core:core-ktx:1.7.0 -> 1.8.0
 |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.core:core:1.8.0
@@ -2547,7 +4102,7 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 |    |    +--- androidx.collection:collection:1.0.0 -> 1.1.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.concurrent:concurrent-futures:1.0.0
-|    |    |    +--- com.google.guava:listenablefuture:1.0
+|    |    |    +--- com.google.guava:listenablefuture:1.0 -> 9999.0-empty-to-avoid-conflict-with-guava
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.3.1 -> 2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -2561,7 +4116,7 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 |    |    \--- androidx.versionedparcelable:versionedparcelable:1.1.1
 |    |         +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |         \--- androidx.collection:collection:1.0.0 -> 1.1.0 (*)
-|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 +--- androidx.appcompat:appcompat:1.4.1 -> 1.5.0
 |    +--- androidx.activity:activity:1.5.0
 |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
@@ -2570,7 +4125,7 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 |    |    +--- androidx.lifecycle:lifecycle-runtime:2.5.0 (*)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0 (c)
 |    |    +--- androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0
 |    |    |    +--- androidx.annotation:annotation:1.0.0 -> 1.3.0
@@ -2584,8 +4139,8 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 |    |    |    |    +--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    |    |    |    +--- androidx.arch.core:core-common:2.1.0 (*)
 |    |    |    |    +--- androidx.lifecycle:lifecycle-common:2.4.0 -> 2.5.0 (*)
-|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.7.10 (*)
-|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    |    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.20 -> 1.8.20-RC2 (*)
+|    |    |    +--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    |    |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1
 |    |    |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1
@@ -2593,14 +4148,14 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1 (c)
 |    |    |         |         |    +--- org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1 (c)
 |    |    |         |         |    \--- org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1 (c)
-|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
-|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.7.10
+|    |    |         |         +--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
+|    |    |         |         \--- org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0 -> 1.8.20-RC2
 |    |    |         +--- org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.1 (*)
-|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.7.10 (*)
+|    |    |         \--- org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0 -> 1.8.20-RC2 (*)
 |    |    +--- androidx.savedstate:savedstate:1.2.0 (*)
 |    |    +--- androidx.tracing:tracing:1.0.0
 |    |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
-|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.7.10 (*)
+|    |    \--- org.jetbrains.kotlin:kotlin-stdlib:1.6.21 -> 1.8.20-RC2 (*)
 |    +--- androidx.annotation:annotation:1.3.0
 |    +--- androidx.appcompat:appcompat-resources:1.5.0
 |    |    +--- androidx.annotation:annotation:1.2.0 -> 1.3.0
@@ -2670,7 +4225,7 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 |    +--- androidx.resourceinspection:resourceinspection-annotation:1.0.1
 |    |    \--- androidx.annotation:annotation:1.1.0 -> 1.3.0
 |    +--- androidx.savedstate:savedstate:1.1.0 -> 1.2.0 (*)
-|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 (*)
+|    +--- org.jetbrains.kotlin:kotlin-stdlib:1.7.10 -> 1.8.20-RC2 (*)
 |    \--- androidx.appcompat:appcompat-resources:1.5.0 (c)
 +--- com.google.android.material:material:1.8.0
 |    +--- com.google.errorprone:error_prone_annotations:2.15.0
@@ -2721,7 +4276,9 @@ releaseUnitTestRuntimeClasspath - Runtime classpath of compilation 'releaseUnitT
 |         +--- androidx.recyclerview:recyclerview:1.1.0 (*)
 |         +--- androidx.core:core:1.1.0 -> 1.8.0 (*)
 |         \--- androidx.collection:collection:1.1.0 (*)
-\--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
++--- androidx.constraintlayout:constraintlayout:2.1.3 (*)
+\--- com.aliyun.aio:AliVCSDK_Premium:6.4.0
+     \--- com.ndk.r18:cpp_shared:0.0.1
 
 releaseUnitTestRuntimeOnly - Runtime only dependencies for compilation 'releaseUnitTest' (target  (androidJvm)). (n)
 No dependencies
@@ -2943,13 +4500,13 @@ No dependencies
 wearApp - Link to a wear app to embed for object 'main'. (n)
 No dependencies
 
-(c) - dependency constraint
-(*) - dependencies omitted (listed previously)
+(c) - A dependency constraint, not a dependency. The dependency affected by the constraint occurs elsewhere in the tree.
+(*) - Indicates repeated occurrences of a transitive dependency subtree. Gradle expands transitive dependency subtrees only once per project; repeat occurrences only display the root of the subtree, followed by this annotation.
 
-(n) - Not resolved (configuration is not meant to be resolved)
+(n) - A dependency or dependency configuration that cannot be resolved.
 
 A web-based, searchable dependency report is available by adding the --scan option.
 ---Gradle：buildFinished 构建结束了
 
-BUILD SUCCESSFUL in 2s
+BUILD SUCCESSFUL in 492ms
 1 actionable task: 1 executed

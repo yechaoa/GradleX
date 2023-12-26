@@ -33,6 +33,7 @@ dependencyResolutionManagement {
 
         // 阿里云仓库
         maven { url "https://maven.aliyun.com/nexus/content/repositories/releases" }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
 
         flatDir {
             dirs 'libs'
