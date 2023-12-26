@@ -61,6 +61,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         ndk {
+            //noinspection ChromeOsAbiSupport
             abiFilters 'arm64-v8a', 'armeabi-v7a', 'armeabi-v8a'
         }
     }
@@ -103,10 +104,10 @@ dependencies {
 
     // test
 //    implementation 'androidx.core:core:1.9.0-beta01'
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     if (project.hasProperty("isTest")) {
         println("---hasProperty isTest yes")
@@ -120,8 +121,8 @@ dependencies {
     }
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //音视频终端 SDK ---打印so测试依赖
     //8.全功能：直播推流（含超低延时直播、RTC连麦）＋短视频＋播放器＋美颜特效
