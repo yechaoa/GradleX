@@ -29,6 +29,11 @@
 - [【Gradle-12】分析so文件和依赖的关系](https://juejin.cn/spost/7287429638019448888)
 - [【Gradle-13】SNAPSHOT版本检查](https://juejin.cn/spost/7292416512333840438)
 
+### 插件功能（Feature）
+- [x] 打印依赖树
+- [x] SNAPSHOT版本检查
+- [x] 打印so文件和依赖的关系
+
 ### 插件使用（Usage）
 step 1. Add the JitPack repository to your build file
 ```agsl
