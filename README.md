@@ -23,13 +23,14 @@
 - [【Gradle-4】Gradle的生命周期](https://juejin.cn/post/7170684769083555877)
 - [【Gradle-5】Gradle常用命令与参数](https://juejin.cn/post/7171493698243395597)
 - [【Gradle-6】一文搞懂Gradle的依赖管理和版本决议](https://juejin.cn/post/7215579793261117501)
-- [【Gradle-7】Gradle构建核心之Task指南](https://juejin.cn/spost/7248207744087277605)
-- [【Gradle-8】Gradle插件开发指南](https://juejin.cn/spost/7267091810380136508)
-- [【Gradle-9】Gradle插件发布指南](https://juejin.cn/spost/7280062870669246525)
+- [【Gradle-7】Gradle构建核心之Task指南](https://juejin.cn/post/7248207744087277605)
+- [【Gradle-8】Gradle插件开发指南](https://juejin.cn/post/7267091810380136508)
+- [【Gradle-9】Gradle插件发布指南](https://juejin.cn/post/7280062870669246525)
 - [【Gradle-10】不可忽视的构建分析](https://juejin.cn/post/7282150745164005432)
-- [【Gradle-11】动态修改VersionName和VersionCode](https://juejin.cn/spost/7282691800858705957)
-- [【Gradle-12】分析so文件和依赖的关系](https://juejin.cn/spost/7287429638019448888)
-- [【Gradle-13】SNAPSHOT版本检查](https://juejin.cn/spost/7292416512333840438)
+- [【Gradle-11】动态修改VersionName和VersionCode](https://juejin.cn/post/7282691800858705957)
+- [【Gradle-12】分析so文件和依赖的关系](https://juejin.cn/post/7287429638019448888)
+- [【Gradle-13】SNAPSHOT版本检查](https://juejin.cn/post/7292416512333840438)
+- [【Gradle-14】编译优化之Gradle最佳配置实践](https://juejin.cn/post/7344625554529730600)
 
 ### 插件功能（Feature）
 - [x] 打印依赖树
