@@ -31,6 +31,7 @@
 - [【Gradle-12】分析so文件和依赖的关系](https://juejin.cn/post/7287429638019448888)
 - [【Gradle-13】SNAPSHOT版本检查](https://juejin.cn/post/7292416512333840438)
 - [【Gradle-14】编译优化之Gradle最佳配置实践](https://juejin.cn/post/7344625554529730600)
+- [【Gradle-15】源码和AAR的依赖替换指南](https://juejin.cn/post/7354940230301696009)
 
 ### 插件功能（Feature）
 - [x] 打印依赖树

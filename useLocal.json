@@ -1,0 +1,8 @@
+[
+  {
+    "useLocal": true,
+    "moduleName": "yutilskt",
+    "modulePath": "../YUtils/yutilskt",
+    "moduleGav": "com.github.yechaoa.YUtils:yutilskt:3.4.0"
+  }
+]

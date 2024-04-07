@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -44,6 +46,80 @@ rootProject.name = "GradleX"
 include ':app'
 include ':plugin'
 
+// 加载local.properties文件
+def localProperties = new Properties()
+file("local.properties").withInputStream { localProperties.load(it) }
+// 从localProperties中获取useLocal属性
+def useLocal = localProperties.getProperty('useLocal', 'false').toBoolean()
+
+println("local.properties useLocal = " + useLocal)
+
+if (useLocal) {
+    include ':yutilskt'
+    project(':yutilskt').projectDir = new File('../YUtils/yutilskt')
+}
+
+apply plugin: UseLocalPlugin
+
+class UseLocalPlugin implements Plugin<Settings> {
+    @Override
+    void apply(Settings settings) {
+
+        // Gradle初始化，此时可以获取到Settings对象
+        settings.gradle.settingsEvaluated {
+            // 加载useLocal.json文件
+            def useLocalFile = new File(settings.getRootDir(), "useLocal.json")
+            if (!useLocalFile.exists()) {
+                println("useLocal.json文件不存在")
+                return
+            }
+            def useLocalText = useLocalFile.text
+
+            // 解析JSON文本
+            def jsonSlurper = new JsonSlurper()
+            def useLocalData = jsonSlurper.parseText(useLocalText)
+
+            // include
+            useLocalData.each { item ->
+                if (item.useLocal) {
+                    settings.include(":${item.moduleName}")
+                    settings.project(":${item.moduleName}").projectDir = new File(item.modulePath)
+                }
+                println("item.useLocal: ${item.useLocal}")
+                println("item.moduleName: ${item.moduleName}")
+                println("item.modulePath: ${item.modulePath}")
+                println("item.moduleGav: ${item.moduleGav}")
+            }
+
+            // 依赖替换
+            SwitchAarToCode(settings.gradle, useLocalData)
+
+        }
+    }
+
+    def SwitchAarToCode(gradle, useLocalData) {
+        // 所有Project对象evaluate完毕之后，会回调gradle.projectsEvaluated
+        gradle.projectsEvaluated {
+            gradle.allprojects { pro ->
+                // 这个app可以根据你的项目名称来判断
+                if (pro.name == "app") {
+                    pro.configurations.all { configuration ->
+                        configuration.resolutionStrategy.dependencySubstitution { substitutions ->
+                            useLocalData.each { item ->
+                                if (item.useLocal) {
+                                    substitute module(item.moduleGav) using substitutions.project(":${item.moduleName}")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
 println("---Gradle：开始初始化了")
 
 //gradle.settingsEvaluated {
@@ -56,10 +132,10 @@ println("---Gradle：开始初始化了")
 //
 //gradle.allprojects {
 //    beforeEvaluate {
-//        println("---Gradle：Project beforeEvaluate Project开始评估，对象是 = "+project.name)
+//        println("---Gradle：Project beforeEvaluate Project开始评估，对象是 = " + project.name)
 //    }
 //    afterEvaluate {
-//        println("---Gradle：Project afterEvaluate Project评估完毕，对象是 = "+project.name)
+//        println("---Gradle：Project afterEvaluate Project评估完毕，对象是 = " + project.name)
 //    }
 //}
 //
@@ -96,28 +172,33 @@ println("---Gradle：开始初始化了")
 //    }
 //})
 
-gradle.buildFinished {
-    println("---Gradle：buildFinished 构建结束了")
-}
 
-gradle.addListener(new BuildListener() {
-    @Override
-    void settingsEvaluated(Settings settings) {
-
-    }
-
-    @Override
-    void projectsLoaded(Gradle gradle) {
-
-    }
-
-    @Override
-    void projectsEvaluated(Gradle gradle) {
-
-    }
-
-    @Override
-    void buildFinished(BuildResult result) {
-
-    }
-})
+/**
+ * buildFinished和addListener在8.0版本之后unsupported
+ * See https://docs.gradle.org/8.0/userguide/configuration_cache.html#config_cache:requirements:build_listeners
+ */
+//gradle.buildFinished {
+//    println("---Gradle：buildFinished 构建结束了")
+//}
+//
+//gradle.addListener(new BuildListener() {
+//    @Override
+//    void settingsEvaluated(Settings settings) {
+//
+//    }
+//
+//    @Override
+//    void projectsLoaded(Gradle gradle) {
+//
+//    }
+//
+//    @Override
+//    void projectsEvaluated(Gradle gradle) {
+//
+//    }
+//
+//    @Override
+//    void buildFinished(BuildResult result) {
+//
+//    }
+//})
