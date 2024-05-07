@@ -32,6 +32,7 @@
 - [【Gradle-13】SNAPSHOT版本检查](https://juejin.cn/post/7292416512333840438)
 - [【Gradle-14】编译优化之Gradle最佳配置实践](https://juejin.cn/post/7344625554529730600)
 - [【Gradle-15】源码和AAR的依赖替换指南](https://juejin.cn/post/7354940230301696009)
+- [【Gradle-16】直接Run和使用命令行编译有什么区别](https://juejin.cn/spost/7366154691031875618)
 
 ### 插件功能（Feature）
 - [x] 打印依赖树
