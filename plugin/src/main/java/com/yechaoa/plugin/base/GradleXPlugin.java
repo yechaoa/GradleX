@@ -10,7 +10,9 @@ import org.gradle.api.Project;
 import org.gradle.api.artifacts.Configuration;
 import org.gradle.api.artifacts.ModuleVersionIdentifier;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -60,12 +62,54 @@ class GradleXPlugin implements Plugin<Project> {
                 System.out.println(TAG + "已关闭snapshot版本检查");
             }
 
+            if (!extension.permissionsToRemove.isEmpty()) {
+                System.out.println(TAG + "已开启权限移除");
+                permissionsToRemove(project, extension.permissionsToRemove);
+            }
+
+        });
+    }
+
+    /**
+     * 移除权限
+     *
+     * @param project             target project
+     * @param permissionsToRemove 需要移除的权限
+     */
+    private void permissionsToRemove(Project project, List<String> permissionsToRemove) {
+        if (permissionsToRemove.isEmpty()) {
+            return;
+        }
+        AppExtension androidExtension = project.getExtensions().getByType(AppExtension.class);
+        androidExtension.getApplicationVariants().all(applicationVariant -> {
+            applicationVariant.getOutputs().all(output -> {
+                        output.getProcessManifest().doLast(task -> {
+                            try {
+                                // 获取manifest文件
+                                File manifestOutFile = output.getProcessResourcesProvider().get().getManifestFile();
+                                // 读取manifest文件
+                                String manifestContent = Files.readString(manifestOutFile.toPath());
+                                // 删除指定权限
+                                for (String permission : permissionsToRemove) {
+                                    System.out.println(TAG + "permission = " + permission);
+                                    manifestContent = manifestContent.replaceAll(permission, "android.permission.INTERNET");
+                                }
+                                // 再写回manifest文件
+                                Files.writeString(manifestOutFile.toPath(), manifestContent);
+                            } catch (IOException e) {
+                                System.out.println(TAG + "permissionsToRemove 文件操作异常，请检查配置");
+                                throw new RuntimeException(e);
+                            }
+                        });
+                    }
+            );
         });
     }
 
     /**
      * snapshot版本检查
      * to do ：白名单
+     *
      * @param project       target project
      * @param blockSnapshot 是否打断编译
      */

@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.yechaoa.plugin.gradleX'
+//    id 'com.yechaoa.plugin.gradleX'
 }
 
 /**
@@ -15,6 +15,7 @@ gradleX {
     analysisSo = false
     checkSnapshot = false
     blockSnapshot = false
+//    permissionsToRemove = ['android.permission.RECORD_AUDIO','android.permission.WRITE_EXTERNAL_STORAGE']
 }
 
 /**
@@ -72,6 +73,17 @@ android {
                 output.versionNameOverride = "3.0"
                 output.versionCodeOverride = 3
             }
+            // 动态删除清单文件里的权限
+//            output.processManifest.doLast {
+//                // 获取manifest文件
+//                def manifestOutFile = output.processResourcesProvider.get().getManifestFile()
+//                // 读取manifest文件
+//                def manifestContent = manifestOutFile.getText()
+//                // 删除指定权限
+//                manifestContent = manifestContent.replaceAll('android.permission.RECORD_AUDIO', 'android.permission.INTERNET')
+//                // 再写回manifest文件
+//                manifestOutFile.write(manifestContent)
+//            }
         }
     }
 

@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--  编译时动态删除权限  -->
+<!--    <uses-permission-->
+<!--        android:name="android.permission.RECORD_AUDIO"-->
+<!--        tools:node="remove"/>-->
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"

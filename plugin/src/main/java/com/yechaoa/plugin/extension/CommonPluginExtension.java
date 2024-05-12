@@ -1,6 +1,9 @@
 package com.yechaoa.plugin.extension;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * GitHub : https://github.com/yechaoa
  * CSDN : http://blog.csdn.net/yechaoa
@@ -31,4 +34,9 @@ public class CommonPluginExtension {
      * snapshot版本检查 如有，打断编译，默认关闭
      */
     public boolean blockSnapshot = false;
+
+    /**
+     * 需要移除的权限
+     */
+    public List<String> permissionsToRemove = new ArrayList<>();
 }

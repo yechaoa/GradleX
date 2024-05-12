@@ -1,12 +1,15 @@
 package com.yechaoa.gradlex
 
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.yechaoa.yutilskt.LogUtil
+import com.yechaoa.yutilskt.ToastUtil
 import com.yechaoa.yutilskt.YUtils
+import com.yechaoa.yutilskt.show
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,16 +22,37 @@ class MainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tv_text).setOnClickListener {
             LogUtil.e("YUtils.init")
 
-            AlertDialog.Builder(this@MainActivity).apply {
-                setTitle("有新版本")
-                setMessage("请问要现在升级吗？")
-                setPositiveButton("确定") { _, _ ->
+            showDialog()
 
-                }
-                setNegativeButton("取消", null)
-                create()
-                show()
+            requestPermission()
+        }
+    }
+
+    private fun requestPermission() {
+        requestPermissions(arrayOf(android.Manifest.permission.RECORD_AUDIO), 1000)
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 1000) {
+            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                ToastUtil.show("权限申请成功")
+            } else {
+                ToastUtil.show("权限申请失败")
             }
+        }
+    }
+
+    private fun showDialog() {
+        AlertDialog.Builder(this@MainActivity).apply {
+            setTitle("有新版本")
+            setMessage("请问要现在升级吗？")
+            setPositiveButton("确定") { _, _ ->
+
+            }
+            setNegativeButton("取消", null)
+            create()
+            show()
         }
     }
 
