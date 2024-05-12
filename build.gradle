@@ -12,9 +12,9 @@ buildscript {
          * 2.再解开app > build.gradle里面的插件的注释 //id 'com.yechaoa.plugin.gradleX'
          * 3.还有app > build.gradle里面的gradleX{}
          */
-//        classpath('com.yechaoa.plugin:gradleX:1.6-SNAPSHOT')
+        classpath('com.yechaoa.plugin:gradleX:1.6-SNAPSHOT')
         // 远端仓库地址
-//        classpath('com.github.yechaoa.GradleX:plugin:1.5')
+        classpath('com.github.yechaoa.GradleX:plugin:1.5')
     }
 }
 
