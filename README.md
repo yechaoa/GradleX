@@ -33,11 +33,13 @@
 - [【Gradle-14】编译优化之Gradle最佳配置实践](https://juejin.cn/post/7344625554529730600)
 - [【Gradle-15】源码和AAR的依赖替换指南](https://juejin.cn/post/7354940230301696009)
 - [【Gradle-16】直接Run和使用命令行编译有什么区别](https://juejin.cn/spost/7366154691031875618)
+- [【Gradle-17】动态删除清单文件中的某个权限](https://juejin.cn/spost/7367701663169429554)
 
 ### 插件功能（Feature）
 - [x] 打印依赖树
 - [x] SNAPSHOT版本检查
 - [x] 打印so文件和依赖的关系
+- [x] 动态删除清单文件中的某个权限
 
 ### 插件使用（Usage）
 step 1. Add the JitPack repository to your build file
@@ -50,7 +52,7 @@ repositories {
 step 2. Add the dependency
 ```agsl
 dependencies {
-    classpath('com.github.yechaoa.GradleX:plugin:1.5')
+    classpath('com.github.yechaoa.GradleX:plugin:1.8')
 }
 ```
 step 3. Add the Plugin Id to your build file and configure the gradleX{ } dsl
@@ -64,5 +66,6 @@ gradleX {
     analysisSo = true
     checkSnapshot = true
     blockSnapshot = false
+    permissionsToRemove = ['android.permission.XXX','android.permission.XXX']
 }
 ```
