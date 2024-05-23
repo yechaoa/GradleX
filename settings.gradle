@@ -143,8 +143,8 @@ println("---Gradle：开始初始化了")
 //    println("---Gradle：projectsEvaluated 所有Project对象评估完毕")
 //}
 
-//@deprecated
-//gradle.addBuildListener(new TaskExecutionListener(){
+
+//gradle.addListener(new TaskExecutionListener(){
 //
 //    @Override
 //    void beforeExecute(Task task) {
@@ -158,8 +158,8 @@ println("---Gradle：开始初始化了")
 //    }
 //})
 
-//@deprecated
-//gradle.addBuildListener(new TaskActionListener() {
+
+//gradle.addListener(new TaskActionListener() {
 //
 //    @Override
 //    void beforeActions(Task task) {
