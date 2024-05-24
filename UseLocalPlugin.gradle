@@ -1,0 +1,61 @@
+import groovy.json.JsonSlurper
+
+apply plugin: UseLocalPlugin
+
+class UseLocalPlugin implements Plugin<Settings> {
+    @Override
+    void apply(Settings settings) {
+
+        // Gradle初始化，此时可以获取到Settings对象
+        settings.gradle.settingsEvaluated {
+            // 加载useLocal.json文件
+            def useLocalFile = new File(settings.getRootDir(), "useLocal.json")
+            if (!useLocalFile.exists()) {
+                println("useLocal.json文件不存在")
+                return
+            }
+            def useLocalText = useLocalFile.text
+
+            // 解析JSON文本
+            def jsonSlurper = new JsonSlurper()
+            def useLocalData = jsonSlurper.parseText(useLocalText)
+
+            // include
+            useLocalData.each { item ->
+                if (item.useLocal) {
+                    settings.include(":${item.moduleName}")
+                    settings.project(":${item.moduleName}").projectDir = new File(item.modulePath)
+                }
+                println("item.useLocal: ${item.useLocal}")
+                println("item.moduleName: ${item.moduleName}")
+                println("item.modulePath: ${item.modulePath}")
+                println("item.moduleGav: ${item.moduleGav}")
+            }
+
+            // 依赖替换
+            SwitchAarToCode(settings.gradle, useLocalData)
+
+        }
+    }
+
+    def SwitchAarToCode(gradle, useLocalData) {
+        // 所有Project对象evaluate完毕之后，会回调gradle.projectsEvaluated
+        gradle.projectsEvaluated {
+            gradle.allprojects { pro ->
+                // 这个app可以根据你的项目名称来判断
+                if (pro.name == "app") {
+                    pro.configurations.all { configuration ->
+                        configuration.resolutionStrategy.dependencySubstitution { substitutions ->
+                            useLocalData.each { item ->
+                                if (item.useLocal) {
+                                    substitute module(item.moduleGav) using substitutions.project(":${item.moduleName}")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
