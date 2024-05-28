@@ -34,6 +34,7 @@
 - [【Gradle-15】源码和AAR的依赖替换指南](https://juejin.cn/post/7354940230301696009)
 - [【Gradle-16】直接Run和使用命令行编译有什么区别](https://juejin.cn/post/7366154691031875618)
 - [【Gradle-17】动态删除清单文件中的某个权限](https://juejin.cn/post/7367701663169429554)
+- [【Gradle-18】从Groovy迁移至Kotlin](https://juejin.cn/post/7372591578756841487)
 
 ### 插件功能（Feature）
 - [x] 打印依赖树
