@@ -64,8 +64,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         ndk {
-            //noinspection ChromeOsAbiSupport
-            abiFilters.addAll(mutableSetOf("arm64-v8a", "armeabi-v7a", "armeabi-v8a"))
+            //noinspection ChromeOsAbiSupport / x86 / x86_64 / arm64-v8a / armeabi-v7a
+            abiFilters.addAll(mutableSetOf("arm64-v8a", "armeabi-v7a"))
         }
     }
 
