@@ -74,10 +74,9 @@ android {
             abiFilters.addAll(mutableSetOf("arm64-v8a", "armeabi-v7a"))
         }
 
-//        manifestPlaceholders = mutableMapOf(
-//            "appName" to "GradleX",
-//            "iconResId" to "@mipmap/ic_launcher"
-//        )
+//        manifestPlaceholders["appName"] = "GradleX"
+//        manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher"
+
     }
 
     applicationVariants.configureEach {
