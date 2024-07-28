@@ -9,8 +9,8 @@
 
 <img src="/pic/learning gradle.png"/>
 
-### 环境（Environments）
-- Android Studio Giraffe | 2022.3.1 Patch 1
+### 编译环境（Environments）
+- Android Studio Giraffe | 2022.3.1 Patch 1（2023年7月）
 - Android Gradle Plugin 8.1.1
 - JDK 17
 
