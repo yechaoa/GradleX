@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">GradleX</string>
-    <string name="author">作者：yechaoa</string>
+    <string name="author">作者：叶超（yechaoa）</string>
     <string name="desc">描述：Gradle从入门到进阶</string>
     <string name="github">GitHub：https://github.com/yechaoa/GradleX</string>
 </resources>

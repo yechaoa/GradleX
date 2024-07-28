@@ -1,0 +1,47 @@
+android {
+
+    // 多渠道打包配置
+    flavorDimensions += 'version'
+    productFlavors {
+        huawei {
+            dimension = 'version'
+            applicationIdSuffix = '.huawei'
+            versionNameSuffix = '-huawei'
+            versionCode = 1
+            buildConfigField 'int', 'CHANNEL_CODE', '1001'
+        }
+        oppo {
+            dimension = 'version'
+            applicationIdSuffix = '.oppo'
+            versionNameSuffix = '-oppo'
+            versionCode = 1
+            buildConfigField 'int', 'CHANNEL_CODE', '1002'
+        }
+//        fast {
+//            dimension = 'version'
+//            applicationIdSuffix = '.fast'
+//            versionNameSuffix = '-fast'
+//            versionCode = 1
+//            buildConfigField 'int', 'CHANNEL_CODE', '1003'
+//            manifestPlaceholders = [
+//                app_icon: '@mipmap/ic_launcher',
+//                app_name: '@string/app_name' + '极速版',
+//            ]
+//        }
+    }
+
+    // 资源文件路径
+    sourceSets {
+        oppo {
+            java.srcDirs 'src/oppo/java', 'src/huawei/java'
+            kotlin.srcDirs 'src/huawei/kotlin'
+            aidl.srcDirs 'src/huawei/aidl'
+            res.srcDirs 'src/huawei/res'
+            assets.srcDirs 'src/huawei/assets'
+            jniLibs.srcDirs 'src/huawei/jniLibs'
+            renderscript.srcDirs 'src/huawei/rs'
+            manifest.srcFile 'src/huawei/AndroidManifest.xml'
+        }
+    }
+
+}

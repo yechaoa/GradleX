@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        HuaweiUtil
+
         YUtils.init(application)
         LogUtil.setIsLog(true);
 
@@ -64,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         Log.wtf("yechaoa", "versionCode = " + packageInfo.versionCode)
         Log.wtf("yechaoa", "packageName = " + packageInfo.packageName)
         Log.wtf("yechaoa", "applicationInfo = " + packageInfo.applicationInfo)
+//        Log.wtf("yechaoa", "flavor = " + BuildConfig.FLAVOR)
     }
 
 }

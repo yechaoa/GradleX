@@ -31,6 +31,11 @@ gradleX {
 //apply(from = "../plugin.gradle")
 
 /**
+ *  多渠道配置示例 解开注释可看效果
+ */
+apply(from = "../channel.gradle")
+
+/**
  * 从动态参数获取VersionName和VersionCode
  */
 fun getVersionNameByProperty(): String {
@@ -41,6 +46,7 @@ fun getVersionNameByProperty(): String {
     }
     return name
 }
+
 fun getVersionCodeByProperty(): Int {
     val code: Int = if (project.hasProperty("VersionCode") && project.property("VersionCode") != null) {
         project.properties["VersionCode"].toString().toInt()
@@ -67,6 +73,11 @@ android {
             //noinspection ChromeOsAbiSupport / x86 / x86_64 / arm64-v8a / armeabi-v7a
             abiFilters.addAll(mutableSetOf("arm64-v8a", "armeabi-v7a"))
         }
+
+//        manifestPlaceholders = mutableMapOf(
+//            "appName" to "GradleX",
+//            "iconResId" to "@mipmap/ic_launcher"
+//        )
     }
 
     applicationVariants.configureEach {
@@ -74,13 +85,13 @@ android {
         this.outputs.all {
             val output = this as com.android.build.gradle.api.BaseVariantOutput
             // 动态修改VersionName和VersionCode
-            if (buildTypeName == "debug") {
-                val apkOutput = this as? com.android.build.gradle.api.ApkVariantOutput
-                apkOutput?.let {
-                    it.versionCodeOverride = 3
-                    it.versionNameOverride = "3.0"
-                }
-            }
+//            if (buildTypeName == "debug") {
+//                val apkOutput = this as? com.android.build.gradle.api.ApkVariantOutput
+//                apkOutput?.let {
+//                    it.versionCodeOverride = 3
+//                    it.versionNameOverride = "3.0"
+//                }
+//            }
             // 动态删除清单文件里的权限 可用plugin中的gradleX { permissionsToRemove = ["android.permission.RECORD_AUDIO","android.permission.WRITE_EXTERNAL_STORAGE"] }
 //            output.processManifest.doLast {
 //                // 获取manifest文件
@@ -97,14 +108,39 @@ android {
 
     buildTypes {
         getByName("debug") {
-            versionNameSuffix = "-测试包"
+//            versionNameSuffix = "-测试包"
+            isDebuggable = true
         }
         getByName("release") {
-            versionNameSuffix = "-正式包"
+//            versionNameSuffix = "-正式包"
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
+//    splits {
+//
+//        // Configures multiple APKs based on ABI.
+//        abi {
+//
+//            // Enables building multiple APKs per ABI.
+//            isEnable = true
+//
+//            // By default all ABIs are included, so use reset() and include to specify that you only
+//            // want APKs for x86 and x86_64.
+//
+//            // Resets the list of ABIs for Gradle to create APKs for to none.
+//            reset()
+//
+//            // Specifies a list of ABIs for Gradle to create APKs for.
+//            include("arm64-v8a", "armeabi-v7a")
+//
+//            // Specifies that you don't want to also generate a universal APK that includes all ABIs.
+//            isUniversalApk = true
+//        }
+//    }
+
+
     buildFeatures {
         buildConfig = true
         viewBinding = true
@@ -151,6 +187,11 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    // 华为推送 华为渠道test
+//    "huaweiImplementation"("com.huawei.hms:push:6.11.0.300")
+//    or
+//    add("huaweiImplementation", "com.huawei.hms:push:6.11.0.300")
 
     //音视频终端 SDK ---打印so测试依赖
     //8.全功能：直播推流（含超低延时直播、RTC连麦）＋短视频＋播放器＋美颜特效
