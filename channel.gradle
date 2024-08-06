@@ -44,4 +44,28 @@ android {
         }
     }
 
+
+//    // 多渠道方式 实现ABI分包 参考
+//    flavorDimensions += listOf("version")
+//    productFlavors {
+//        create("huawei-armeabi-v7a") {
+//            dimension = "version"
+//            ndk {
+//                abiFilters.addAll(mutableSetOf("armeabi-v7a"))
+//            }
+//        }
+//        create("huawei-arm64-v8a") {
+//            dimension = "version"
+//            ndk {
+//                abiFilters.addAll(mutableSetOf("arm64-v8a"))
+//            }
+//        }
+//        create("huawei-all") {
+//            dimension = "version"
+//            ndk {
+//                abiFilters.addAll(mutableSetOf("arm64-v8a", "armeabi-v7a"))
+//            }
+//        }
+//    }
+
 }

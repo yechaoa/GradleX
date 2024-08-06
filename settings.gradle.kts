@@ -1,6 +1,8 @@
 import java.util.Properties
 import java.io.File
 
+println("---Gradle：开始初始化了")
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -58,8 +60,6 @@ if (useLocal) {
 
 // 插件式应用 切换逻辑
 apply(from = "UseLocalPlugin.gradle")
-
-println("---Gradle：开始初始化了")
 
 //gradle.settingsEvaluated {
 //    println("---Gradle：settingsEvaluated Settings对象评估完毕")

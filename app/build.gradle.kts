@@ -33,7 +33,7 @@ gradleX {
 /**
  *  多渠道配置示例 解开注释可看效果
  */
-apply(from = "../channel.gradle")
+//apply(from = "../channel.gradle")
 
 /**
  * 从动态参数获取VersionName和VersionCode
@@ -70,8 +70,9 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         ndk {
+            // splits中配置了abi，这里就不需要配置了
             //noinspection ChromeOsAbiSupport / x86 / x86_64 / arm64-v8a / armeabi-v7a
-            abiFilters.addAll(mutableSetOf("arm64-v8a", "armeabi-v7a"))
+//            abiFilters.addAll(mutableSetOf("arm64-v8a", "armeabi-v7a"))
         }
 
 //        manifestPlaceholders["appName"] = "GradleX"
@@ -117,28 +118,27 @@ android {
         }
     }
 
-//    splits {
-//
-//        // Configures multiple APKs based on ABI.
-//        abi {
-//
-//            // Enables building multiple APKs per ABI.
-//            isEnable = true
-//
-//            // By default all ABIs are included, so use reset() and include to specify that you only
-//            // want APKs for x86 and x86_64.
-//
-//            // Resets the list of ABIs for Gradle to create APKs for to none.
-//            reset()
-//
-//            // Specifies a list of ABIs for Gradle to create APKs for.
-//            include("arm64-v8a", "armeabi-v7a")
-//
-//            // Specifies that you don't want to also generate a universal APK that includes all ABIs.
-//            isUniversalApk = true
-//        }
-//    }
+    // ./gradlew assembleRelease -PisRelease=true
+    val isRelease  = project.hasProperty("isRelease") && project.property("isRelease") == "true"
+    println("splits isRelease === : $isRelease")
+    // ./gradlew assembleRelease -PisRelease=true -PonlyArm64=true
+    val onlyArm64  = project.hasProperty("onlyArm64") && project.property("onlyArm64") == "true"
+    println("splits onlyArm64 === : $onlyArm64")
 
+    // ABI 分包
+    splits {
+        abi {
+            isEnable = isRelease
+            reset()
+            if (onlyArm64) {
+                include("arm64-v8a")
+                isUniversalApk = false
+            } else {
+                include("arm64-v8a", "armeabi-v7a")
+                isUniversalApk = true
+            }
+        }
+    }
 
     buildFeatures {
         buildConfig = true
