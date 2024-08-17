@@ -1,4 +1,5 @@
 import java.util.Properties
+import java.io.FileInputStream
 
 plugins {
     id("com.android.application")
@@ -56,6 +57,11 @@ fun getVersionCodeByProperty(): Int {
     return code
 }
 
+val keystorePropertiesFile = rootProject.file("jks/keystore.properties")
+val keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
+
 android {
     namespace = "com.yechaoa.gradlex"
     compileSdk = 33
@@ -106,6 +112,15 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            keyAlias = keystoreProperties["keyAlias"] as String
+            keyPassword = keystoreProperties["keyPassword"] as String
+            storeFile = file(keystoreProperties["storeFile"] as String)
+            storePassword = keystoreProperties["storePassword"] as String
+        }
+    }
+
     buildTypes {
         getByName("debug") {
 //            versionNameSuffix = "-测试包"
@@ -115,6 +130,7 @@ android {
 //            versionNameSuffix = "-正式包"
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
