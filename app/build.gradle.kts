@@ -2,7 +2,8 @@ import java.util.Properties
 import java.io.FileInputStream
 
 plugins {
-    id("com.android.application")
+    alias(libs.plugins.android.application)
+//    id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.yechaoa.plugin.gradleX")
 }
@@ -67,9 +68,9 @@ android {
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.yechaoa.gradlex"
-        minSdk = 23
-        targetSdk = 33
+        applicationId = properties["applicationId"].toString()
+        minSdk = properties["minSdk"].toString().toInt()
+        targetSdk = properties["targetSdk"].toString().toInt()
         versionCode = getVersionCodeByProperty()
         versionName = getVersionNameByProperty()
 
@@ -135,10 +136,10 @@ android {
     }
 
     // ./gradlew assembleRelease -PisRelease=true
-    val isRelease  = project.hasProperty("isRelease") && project.property("isRelease") == "true"
+    val isRelease = project.hasProperty("isRelease") && project.property("isRelease") == "true"
     println("splits isRelease === : $isRelease")
     // ./gradlew assembleRelease -PisRelease=true -PonlyArm64=true
-    val onlyArm64  = project.hasProperty("onlyArm64") && project.property("onlyArm64") == "true"
+    val onlyArm64 = project.hasProperty("onlyArm64") && project.property("onlyArm64") == "true"
     println("splits onlyArm64 === : $onlyArm64")
 
     // ABI 分包
@@ -195,8 +196,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
 //    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation(libs.androidx.ktx)
+    implementation(libs.androidx.appcompat)
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")

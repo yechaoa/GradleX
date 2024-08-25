@@ -1,4 +1,17 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+/**
+ * 版本管理示例
+ * 使用：implementation("androidx.core:core-ktx:${rootProject.extra.get("core-ktx")}")
+ */
+extra.apply {
+    set("applicationId", "com.yechaoa.gradlex")
+    set("minSdk", 23)
+    set("targetSdk", 33)
+    set("core-ktx", "1.9.0")
+    set("appcompat", "1.6.1")
+}
+
 buildscript {
     repositories {
         google()
@@ -19,9 +32,11 @@ buildscript {
     }
 }
 
+//@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("com.android.application") version "8.1.1" apply false
+    alias(libs.plugins.android.application) apply false
+//    id("com.android.application") version "8.1.1" apply false
     id("com.android.library") version "8.1.1" apply false
-    id("org.jetbrains.kotlin.android") version "1.7.10" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.20" apply false
     id("com.dorongold.task-tree") version "2.1.1"
 }

@@ -1,0 +1,12 @@
+[versions]
+agp = "8.1.1"
+ktx = "1.9.0"
+appcompat = "1.6.1"
+kotlin = "1.9.20"
+
+[libraries]
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
