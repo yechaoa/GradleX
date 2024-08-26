@@ -172,7 +172,10 @@ android {
 
 // 加载local.properties文件
 val localProperties = Properties()
-file("../local.properties").inputStream().use { localProperties.load(it) }
+val localPropertiesFile = file("../local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { localProperties.load(it) }
+}
 // 从localProperties中获取useLocal属性
 val useLocal = localProperties.getProperty("useLocal", "false").toBoolean()
 
