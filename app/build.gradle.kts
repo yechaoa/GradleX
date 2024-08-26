@@ -58,9 +58,11 @@ fun getVersionCodeByProperty(): Int {
     return code
 }
 
-val keystorePropertiesFile = rootProject.file("jks/keystore.properties")
 val keystoreProperties = Properties()
-keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+val keystorePropertiesFile: File = rootProject.file("jks/keystore.properties")
+if (keystorePropertiesFile.exists()){
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+}
 
 
 android {
@@ -115,10 +117,12 @@ android {
 
     signingConfigs {
         create("release") {
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
+            if (keystorePropertiesFile.exists()){
+                keyAlias = keystoreProperties["keyAlias"] as String
+                keyPassword = keystoreProperties["keyPassword"] as String
+                storeFile = file(keystoreProperties["storeFile"] as String)
+                storePassword = keystoreProperties["storePassword"] as String
+            }
         }
     }
 
