@@ -3,8 +3,8 @@
 [![](https://jitpack.io/v/yechaoa/GradleX.svg)](https://jitpack.io/#yechaoa/GradleX)
 ![](https://img.shields.io/badge/%E6%8E%98%E9%87%91-yechaoa-blue)
 ![](https://img.shields.io/badge/CSDN-yechaoa-green.svg)
-![](https://img.shields.io/badge/Gradle-8.1.1-orange.svg)
-![](https://img.shields.io/badge/AndroidStudio-2022.3.1%20Patch%201-yellow.svg)
+![](https://img.shields.io/badge/Gradle-8.7-orange.svg)
+![](https://img.shields.io/badge/AndroidStudio-Koala-yellow.svg)
 ![](https://img.shields.io/badge/JDK-17-red.svg)
 
 <img src="/pic/learning gradle.png"/>
