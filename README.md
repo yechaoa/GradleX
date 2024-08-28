@@ -10,11 +10,10 @@
 <img src="/pic/learning gradle.png"/>
 
 ### 编译环境（Environments）
-- Android Studio Koala | 2024.1.1 Patch 1（ July 11, 2024）
-- Gradle 8.7
-- Android Gradle Plugin 8.5.1
-- JDK 17
-- Kotlin 1.9.20
+
+|     Android Studio     | Gradle | Android Gradle Plugin | JDK | Kotlin |
+|:----------------------:|:------:|:---------------------:|:---:|:------:|
+| Koala 2024.1.1 Patch 1 |  8.7   |         8.5.1         | 17  | 1.9.20 |
 
 ### 系列博客（Blog）
 
@@ -39,26 +38,33 @@
 - [【Gradle-18】从Groovy迁移至Kotlin](https://juejin.cn/post/7372591578756841487)
 
 ### 插件功能（Feature）
+
 - [x] 打印依赖树
 - [x] SNAPSHOT版本检查
 - [x] 打印so文件和依赖的关系
 - [x] 动态删除清单文件中的某个权限
 
 ### 插件使用（Usage）
+
 step 1. Add the JitPack repository to your build file
+
 ```agsl
 repositories {
 	...
 	maven { url 'https://jitpack.io' }
 }
 ```
+
 step 2. Add the dependency
+
 ```agsl
 dependencies {
     classpath('com.github.yechaoa.GradleX:plugin:1.8')
 }
 ```
+
 step 3. Add the Plugin Id to your build file and configure the gradleX{ } dsl
+
 ```agsl
 plugins {
     id 'com.yechaoa.plugin.gradleX'
