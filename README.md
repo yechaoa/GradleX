@@ -1,7 +1,7 @@
 # GradleX
 
 [![](https://jitpack.io/v/yechaoa/GradleX.svg)](https://jitpack.io/#yechaoa/GradleX)
-![](https://img.shields.io/badge/%E6%8E%98%E9%87%91-yechaoa-blue)
+[![](https://img.shields.io/badge/%E6%8E%98%E9%87%91-yechaoa-blue)](https://juejin.cn/user/659362706101735/posts)
 ![](https://img.shields.io/badge/CSDN-yechaoa-green.svg)
 ![](https://img.shields.io/badge/Gradle-8.7-orange.svg)
 ![](https://img.shields.io/badge/AndroidStudio-Koala-yellow.svg)
