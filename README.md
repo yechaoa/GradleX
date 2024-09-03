@@ -7,7 +7,7 @@
 ![](https://img.shields.io/badge/AndroidStudio-Koala-yellow.svg)
 ![](https://img.shields.io/badge/JDK-17-red.svg)
 
-<img src="/pic/learning gradle.png"/>
+<img src="/pic/learning gradle.png" alt="pic" />
 
 ### 编译环境（Environments）
 
@@ -48,16 +48,16 @@
 
 step 1. Add the JitPack repository to your build file
 
-```agsl
+```groovy
 repositories {
-	...
-	maven { url 'https://jitpack.io' }
+    // ...
+    maven { url 'https://jitpack.io' }
 }
 ```
 
 step 2. Add the dependency
 
-```agsl
+```groovy
 dependencies {
     classpath('com.github.yechaoa.GradleX:plugin:1.8')
 }
@@ -65,7 +65,7 @@ dependencies {
 
 step 3. Add the Plugin Id to your build file and configure the gradleX{ } dsl
 
-```agsl
+```groovy
 plugins {
     id 'com.yechaoa.plugin.gradleX'
 }
@@ -75,6 +75,6 @@ gradleX {
     analysisSo = true
     checkSnapshot = true
     blockSnapshot = false
-    permissionsToRemove = ['android.permission.XXX','android.permission.XXX']
+    permissionsToRemove = ['android.permission.XXX', 'android.permission.XXX']
 }
 ```
