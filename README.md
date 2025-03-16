@@ -3,7 +3,7 @@
 [![](https://jitpack.io/v/yechaoa/GradleX.svg)](https://jitpack.io/#yechaoa/GradleX)
 [![](https://img.shields.io/badge/%E6%8E%98%E9%87%91-yechaoa-blue)](https://juejin.cn/user/659362706101735/posts)
 ![](https://img.shields.io/badge/CSDN-yechaoa-green.svg)
-![](https://img.shields.io/badge/Gradle-8.7-orange.svg)
+![](https://img.shields.io/badge/Gradle-8.11.1-orange.svg)
 ![](https://img.shields.io/badge/AndroidStudio-Koala-yellow.svg)
 ![](https://img.shields.io/badge/JDK-17-red.svg)
 
@@ -13,7 +13,7 @@
 
 |     Android Studio     | Gradle | Android Gradle Plugin | JDK | Kotlin |
 |:----------------------:|:------:|:---------------------:|:---:|:------:|
-| Koala 2024.1.1 Patch 1 |  8.7   |         8.5.1         | 17  | 1.9.20 |
+| Android Studio Meerkat | 8.11.1 |         8.9.0         | 17  | 2.1.0  |
 
 ### 系列博客（Blog）
 

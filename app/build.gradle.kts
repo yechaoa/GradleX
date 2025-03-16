@@ -67,7 +67,7 @@ if (keystorePropertiesFile.exists()){
 
 android {
     namespace = "com.yechaoa.gradlex"
-    compileSdk = 33
+    compileSdk = 35
 
     defaultConfig {
         applicationId = properties["applicationId"].toString()
@@ -205,7 +205,7 @@ dependencies {
 
     implementation(libs.androidx.ktx)
     implementation(libs.androidx.appcompat)
-    implementation("com.google.android.material:material:1.9.0")
+    implementation(libs.material)
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -217,7 +217,7 @@ dependencies {
 //    add("huaweiImplementation", "com.huawei.hms:push:6.11.0.300")
 
     //音视频终端 SDK ---打印so测试依赖
-    //8.全功能：直播推流（含超低延时直播、RTC连麦）＋短视频＋播放器＋美颜特效
+    //8.全功能：直播推流（含超低延时直播、RTC连麦）＋短视频＋播放器＋美颜特效 https://help.aliyun.com/zh/apsara-video-sdk/product-overview/integrated-sdk-upgrade-instructions
     implementation("com.aliyun.aio:AliVCSDK_Premium:6.4.0")
 
     // 看Gradle源码用

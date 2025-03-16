@@ -31,11 +31,11 @@ dependencyResolutionManagement {
         maven("https://jitpack.io")
         // 本地maven仓库地址
         maven("./plugin/build/maven-repo")
-
         // 阿里云仓库
-        maven("https://maven.aliyun.com/nexus/content/repositories/releases")
         maven("https://maven.aliyun.com/repository/public/")
-
+        // 腾讯云仓库
+        maven("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/")
+        mavenLocal()
         flatDir {
             dirs("libs")
         }
